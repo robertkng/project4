@@ -10,6 +10,8 @@ const cookieParser  = require('cookie-parser');
 const bodyParser = require('body-parser');
 const app     = express();
 const PORT    = process.argv[2] || process.env.port || 3000;
+const itinerary = require('./routes/itinerary');
+// const operator = require('./routes/operator');
 // const usersRouter   = require('./routes/api/users');
 // const authRouter    = require('./routes/api/auth');
 
@@ -27,8 +29,10 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 
 // Routes used in our web application
+app.use('/', itinerary);
+// app.use('/', operator);
 // app.use('/api/users', usersRouter);
 // app.use('/api/auth', authRouter);
 
 // To log whether a server is running
-app.listen(PORT, () => console.log('server here! listening on', PORT));
+app.listen(PORT, () => console.log('server is listening on ', PORT));
