@@ -30,13 +30,36 @@ export default class App extends Component {
     .catch(err => console.log(err));
   }
 
+    updateInput(e) {
+    // let movieTitle = e.target.value;
+    this.setState({
+      // searchTerm: movieTitle
+      searchTerm: e.target.value
+    })
+    console.log(this.state.searchTerm);
+  }
+
+  searchImages(searchTerm) {
+    console.log('searchImages function');
+  fetch(`http://www.omdbapi.com/?t=${this.state.searchTerm}`)
+  .then(r => r.json())
+  .then((found) => {
+    this.setState({
+      result: found
+    });
+  })
+  .catch(err => console.log(err));
+}
 
   render() {
     return (
       <div className="App">
           <h2>Quotinerary</h2>
           <Search
+            name={this.state.searchTerm}
+            userInput={this.updateInput.bind(this)}
             search={()=> this.searchImages()}
+            result={this.state.result}
           />
         </div>
     );

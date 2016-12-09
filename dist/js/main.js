@@ -7527,7 +7527,9 @@
 	result:{}};return _this;}_createClass(App,[{key:'getAllImages',value:function getAllImages(){var _this2=this;console.log('app.jsx');// fetch must be made to middleware route. Client will never see this
 	fetch('/images').then(function(r){return r.json();}).then(function(data){_this2.setState({// images: data
 	});// console.log(this.state);
-	}).catch(function(err){return console.log(err);});}},{key:'render',value:function render(){var _this3=this;return _react2.default.createElement('div',{className:'App'},_react2.default.createElement('h2',null,'Quotinerary'),_react2.default.createElement(_Search2.default,{search:function search(){return _this3.searchImages();}}));}}]);return App;}(_react.Component);// return (
+	}).catch(function(err){return console.log(err);});}},{key:'updateInput',value:function updateInput(e){// let movieTitle = e.target.value;
+	this.setState({// searchTerm: movieTitle
+	searchTerm:e.target.value});console.log(this.state.searchTerm);}},{key:'searchImages',value:function searchImages(searchTerm){var _this3=this;console.log('searchImages function');fetch('http://www.omdbapi.com/?t='+this.state.searchTerm).then(function(r){return r.json();}).then(function(found){_this3.setState({result:found});}).catch(function(err){return console.log(err);});}},{key:'render',value:function render(){var _this4=this;return _react2.default.createElement('div',{className:'App'},_react2.default.createElement('h2',null,'Quotinerary'),_react2.default.createElement(_Search2.default,{name:this.state.searchTerm,userInput:this.updateInput.bind(this),search:function search(){return _this4.searchImages();},result:this.state.result}));}}]);return App;}(_react.Component);// return (
 	//   <div className="App">
 	//     <Nav />
 	//     <SearchHeader
