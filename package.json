@@ -1,5 +1,5 @@
 {
-  "name": "project3",
+  "name": "project4",
   "version": "1.0.0",
   "description": "React application template using webpack",
   "main": "server.js",
@@ -14,9 +14,9 @@
   },
   "repository": {
     "type": "",
-    "url": "git@git.generalassemb.ly:kierangillen/hw-w08-d04.git"
+    "url": "github.com/robertkng/project4"
   },
-  "author": "Kieran, Carla, Robert, Nicky",
+  "author": "Robert",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/gittheking/react_template/issues"
