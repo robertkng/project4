@@ -5,6 +5,11 @@ class Search extends Component {
   render() {
     return (
     <div>
+        <input
+        type="text"
+        value={this.props.name}
+        onChange={this.props.userInput}
+        />
         <button onClick={this.props.search}>SEARCH CITY OR COUNTRY</button>
     </div>
     )
