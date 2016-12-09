@@ -1,7 +1,9 @@
 BEGIN;
 
 DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS savedSearch;
+DROP TABLE IF EXISTS destinations;
+DROP TABLE IF EXISTS itinerary;
+DROP TABLE IF EXISTS operators;
 
 CREATE TABLE users (
   user_id SERIAL,
@@ -9,6 +11,14 @@ CREATE TABLE users (
   password VARCHAR NOT NULL,
   saved_itinerary INTEGER NOT NULL UNIQUE,
   created_at TIMESTAMP DEFAULT current_timestamp
+);
+
+CREATE TABLE destinations (
+  city VARCHAR NOT NULL,
+  country VARCHAR NOT NULL,
+  activity VARCHAR NOT NULL,
+  operator VARCHAR NOT NULL,
+  email VARCHAR NOT NULL
 );
 
 CREATE TABLE itinerary (
@@ -23,8 +33,8 @@ CREATE TABLE itinerary (
 );
 
 CREATE INDEX on itinerary (completed) ;
-CREATE INDEX on itinerary (task_time_start) ;
 CREATE INDEX on itinerary (date_created) ;
+CREATE INDEX on itinerary (date_deleted) ;
 
 CREATE TABLE operators (
   operator_id SERIAL,
