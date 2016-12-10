@@ -3,6 +3,8 @@ const webpack           = require('webpack');
 const path              = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// required DotenvPlugin for importing dotenv file
+const DotenvPlugin      = require('webpack-dotenv-plugin');
 
 const BUILD_DIR         = path.resolve(__dirname, 'dist');
 const APP_DIR           = path.resolve(__dirname, 'src');
@@ -23,7 +25,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'ReactJS Hello World',
+      title: 'Quotinerary',
       xhtml: true,
       inject: false,
       template: require('html-webpack-template'),
@@ -31,6 +33,9 @@ module.exports = {
     }),
     new ExtractTextPlugin('/css/[name].css', {
       allChunks: true
+    }),
+    new DotenvPlugin({
+      path: './.env'
     })
   ],
 
