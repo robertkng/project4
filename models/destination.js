@@ -1,10 +1,10 @@
 const pgp = require('pg-promise')();
 const db = require('../lib/dbconnect');
 
-function getAllImages(req, res, next) {
+function getAllDestinations(req, res, next) {
   db.any(`SELECT * FROM destinations;`)
   .then((results) => {
-    res.images = results
+    res.destinations = results
     next();
   })
   .catch(err => next(err));
@@ -27,7 +27,7 @@ function getAllImages(req, res, next) {
 
 
 module.exports = {
-  getAllImages,
+  getAllDestinations,
   // addMovie,
   // deleteMovie
 }

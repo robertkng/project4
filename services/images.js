@@ -1,5 +1,4 @@
 const fetch = require('node-fetch');
-// const API_URL = "https://api.shutterstock.com/v2";
 
 function searchImages(req, res, next) {
 const CLIENT_ID = process.env.CLIENT_ID;

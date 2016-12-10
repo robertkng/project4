@@ -91,17 +91,3 @@ searchImages(searchTerm) {
   }
 }
 
-
-
-
-    // return (
-    //   <div className="App">
-    //     <Nav />
-    //     <MovieList
-    //       movies={this.state.movies}
-    //       getAllMovies={this.getAllMovies.bind(this)}
-    //       deleteFromDb={this.deleteFromDb.bind(this)}
-    //     />
-    //     <Footer />
-    //   </div>
-    // );

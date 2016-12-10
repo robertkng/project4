@@ -50,6 +50,10 @@ header h1 {
 a {
   display: block;
 }
+
+h2 {
+  text-align: left;
+}
 .App {
   text-align: center;
 }

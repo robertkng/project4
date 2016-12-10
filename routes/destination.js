@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 // const { addImages, deleteImages, getAllImages } = require('../models/images');
-const { getAllImages } = require('../models/images');
+const { getAllDestinations } = require('../models/destination');
 const { searchImages } = require('../services/images');
 
-router.get('/images', getAllImages, (req, res) => {
-  res.json(res.images || []);
+router.get('/destinations', getAllDestinations, (req, res) => {
+  res.json(res.destinations || []);
 })
 
 // router.post('/images', addImages, (req, res) => {
