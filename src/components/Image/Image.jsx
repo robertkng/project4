@@ -4,17 +4,16 @@ import './Image.css';
 
 class Image extends Component {
 
-  // renderAllMovies() {
-  //   return this.props.movies.map((mov, i) =>
-  //     <MovieListItem
-  //       title={mov.title}
-  //       poster={mov.poster}
-  //       key={i}
-  //       id={mov.id}
-  //       deleteFromDb={this.props.deleteFromDb}
-  //     />
-  //     )
-  // }
+  renderAllImages() {
+    return this.props.images.map((mov, i) =>
+      <Render
+        // title={mov.title}
+        // poster={mov.poster}
+        key={i}
+        id={mov.id}
+      />
+      )
+  }
 
 
   componentWillMount(){
@@ -26,7 +25,7 @@ class Image extends Component {
   render() {
     return(
       <div>
-      <h2>Now Showing</h2>
+      <h2>Most Popular Destinations</h2>
 
       {this.renderAllImages()}
 

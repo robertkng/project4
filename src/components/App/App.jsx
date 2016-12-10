@@ -66,6 +66,10 @@ export default class App extends Component {
             search={()=> this.searchImages()}
             result={this.state.result}
           />
+          <Image
+            images={this.state.images}
+            getAllImages={this.getAllImages.bind(this)}
+          />
         </div>
     );
   }
@@ -75,13 +79,6 @@ export default class App extends Component {
     // return (
     //   <div className="App">
     //     <Nav />
-    //     <SearchHeader
-    //       name={this.state.searchTerm}
-    //       userInput={this.updateInput.bind(this)}
-    //       search={()=> this.searchMovies()}
-    //       result={this.state.result}
-    //       addToDb={this.addToDb.bind(this)}
-    //     />
     //     <MovieList
     //       movies={this.state.movies}
     //       getAllMovies={this.getAllMovies.bind(this)}

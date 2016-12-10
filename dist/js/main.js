@@ -7531,16 +7531,9 @@
 	}).catch(function(err){return console.log(err);});}},{key:'updateInput',value:function updateInput(e){// let movieTitle = e.target.value;
 	this.setState({// searchTerm: movieTitle
 	searchTerm:e.target.value});console.log(this.state.searchTerm);}},{key:'searchImages',value:function searchImages(searchTerm){var _this3=this;var CLIENT_ID=process.env.CLIENT_ID;var CLIENT_SECRET=process.env.CLIENT_SECRET;console.log(CLIENT_ID,CLIENT_SECRET);// fetch(`https://api.shutterstock.com/v2/images/search?per_page=4&query=${this.state.searchTerm}`)
-	fetch('https://'+CLIENT_ID+':'+CLIENT_SECRET+'@api.shutterstock.com/v2/images/search?query='+this.state.searchTerm).then(function(r){return r.json();}).then(function(found){_this3.setState({result:found});console.log('searchImages function');}).catch(function(err){return console.log(err);});}},{key:'render',value:function render(){var _this4=this;return _react2.default.createElement('div',{className:'App'},_react2.default.createElement('h2',null,'Quotinerary'),_react2.default.createElement(_Search2.default,{name:this.state.searchTerm,userInput:this.updateInput.bind(this),search:function search(){return _this4.searchImages();},result:this.state.result}));}}]);return App;}(_react.Component);// return (
+	fetch('https://'+CLIENT_ID+':'+CLIENT_SECRET+'@api.shutterstock.com/v2/images/search?query='+this.state.searchTerm).then(function(r){return r.json();}).then(function(found){_this3.setState({result:found});console.log('searchImages function');}).catch(function(err){return console.log(err);});}},{key:'render',value:function render(){var _this4=this;return _react2.default.createElement('div',{className:'App'},_react2.default.createElement('h2',null,'Quotinerary'),_react2.default.createElement(_Search2.default,{name:this.state.searchTerm,userInput:this.updateInput.bind(this),search:function search(){return _this4.searchImages();},result:this.state.result}),_react2.default.createElement(Image,{images:this.state.images,getAllImages:this.getAllImages.bind(this)}));}}]);return App;}(_react.Component);// return (
 	//   <div className="App">
 	//     <Nav />
-	//     <SearchHeader
-	//       name={this.state.searchTerm}
-	//       userInput={this.updateInput.bind(this)}
-	//       search={()=> this.searchMovies()}
-	//       result={this.state.result}
-	//       addToDb={this.addToDb.bind(this)}
-	//     />
 	//     <MovieList
 	//       movies={this.state.movies}
 	//       getAllMovies={this.getAllMovies.bind(this)}
