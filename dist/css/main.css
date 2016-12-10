@@ -39,6 +39,17 @@ header h1 {
   color: #FAFAFA;
   height: 30px;
 }
+#results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*flex-direction: row;*/
+
+}
+
+a {
+  display: block;
+}
 .App {
   text-align: center;
 }

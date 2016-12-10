@@ -47,7 +47,7 @@
   \**********************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);var _reactDom=__webpack_require__(/*! react-dom */ 32);var _reactDom2=_interopRequireDefault(_reactDom);var _App=__webpack_require__(/*! ./components/App/App.jsx */ 178);var _App2=_interopRequireDefault(_App);__webpack_require__(/*! ./index.css */ 182);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}_reactDom2.default.render(_react2.default.createElement(_App2.default,null),document.querySelector('#root-container'));
+	'use strict';var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);var _reactDom=__webpack_require__(/*! react-dom */ 32);var _reactDom2=_interopRequireDefault(_reactDom);var _App=__webpack_require__(/*! ./components/App/App.jsx */ 178);var _App2=_interopRequireDefault(_App);__webpack_require__(/*! ./index.css */ 184);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}_reactDom2.default.render(_react2.default.createElement(_App2.default,null),document.querySelector('#root-container'));
 
 /***/ },
 /* 1 */
@@ -7440,34 +7440,21 @@
   \************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);var _Search=__webpack_require__(/*! ../Search/Search.jsx */ 179);var _Search2=_interopRequireDefault(_Search);__webpack_require__(/*! ./App.css */ 181);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}// import Socket from './Socket/Socket.jsx';
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);var _Search=__webpack_require__(/*! ../Search/Search.jsx */ 179);var _Search2=_interopRequireDefault(_Search);var _Destination=__webpack_require__(/*! ../Destination/Destination.jsx */ 185);var _Destination2=_interopRequireDefault(_Destination);__webpack_require__(/*! ./App.css */ 183);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}// import Socket from './Socket/Socket.jsx';
 	// const CLIENT_ID = process.env.CLIENT_ID;
 	// const CLIENT_SECRET = process.env.CLIENT_SECRET;
-	var App=function(_Component){_inherits(App,_Component);function App(){_classCallCheck(this,App);var _this=_possibleConstructorReturn(this,(App.__proto__||Object.getPrototypeOf(App)).call(this));_this.state={searchTerm:'',images:[],// totalResults: 0
-	result:{}};return _this;}_createClass(App,[{key:'getAllImages',value:function getAllImages(){var _this2=this;console.log('app.jsx');// fetch must be made to middleware route. Client will never see this
-	fetch('/images').then(function(r){return r.json();}).then(function(data){_this2.setState({images:data});// console.log(this.state);
+	var App=function(_Component){_inherits(App,_Component);function App(){_classCallCheck(this,App);var _this=_possibleConstructorReturn(this,(App.__proto__||Object.getPrototypeOf(App)).call(this));_this.state={searchTerm:'',destinations:[],// totalResults: 0
+	result:{}};return _this;}_createClass(App,[{key:'getAllDestinations',value:function getAllDestinations(){var _this2=this;console.log('app.jsx');// fetch must be made to middleware route. Client will never see this
+	fetch('/destinations').then(function(r){return r.json();}).then(function(data){_this2.setState({destinations:data});// console.log(this.state);
 	}).catch(function(err){return console.log(err);});}},{key:'updateInput',value:function updateInput(e){// let movieTitle = e.target.value;
 	this.setState({// searchTerm: movieTitle
-	searchTerm:e.target.value});console.log(this.state.searchTerm);}//   searchImages(searchTerm) {
-	//     const CLIENT_ID = process.env.CLIENT_ID;
-	//     const CLIENT_SECRET = process.env.CLIENT_SECRET;
-	//     console.log(CLIENT_ID, CLIENT_SECRET);
-	//   // fetch(`https://api.shutterstock.com/v2/images/search?per_page=4&query=${this.state.searchTerm}`)
-	//   fetch(`https://${CLIENT_ID}:${CLIENT_SECRET}@api.shutterstock.com/v2/images/search?query=${this.state.searchTerm}`)
-	//   .then(r => r.json())
-	//   .then((found) => {
-	//     this.setState({
-	//       result: found
-	//     });
-	//     console.log('searchImages function');
-	//   })
-	//   .catch(err => console.log(err));
-	// }
-	},{key:'searchImages',value:function searchImages(searchTerm){var CLIENT_ID=("9debd6d8d3c9644df10d");var CLIENT_SECRET=("e9bb5e577bdcc6b30c1bad26a095c627ebd2688d");// Basic Authentication for accessing Shutterstock API
-	// window.btoa encodes API credentials just like .env.
+	searchTerm:e.target.value});console.log(this.state.searchTerm);}},{key:'searchImages',value:function searchImages(searchTerm){var _this3=this;// Set variable for API credentials
+	var CLIENT_ID=("9debd6d8d3c9644df10d");var CLIENT_SECRET=("e9bb5e577bdcc6b30c1bad26a095c627ebd2688d");// window.btoa encodes API credentials just like .env.
 	// source: https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/btoa
-	var basicAuth=function basicAuth(){return'Basic '.concat(window.btoa(CLIENT_ID+':'+CLIENT_SECRET));};console.log(CLIENT_ID,CLIENT_SECRET,basicAuth());// API looks for headers before providing authorization to access data from the API
-	var authParameters={headers:{Authorization:basicAuth()}};var SHUTTERSTOCK_API_ENDPOINT='https://api.shutterstock.com/v2/images/search?query='+this.state.searchTerm;fetch(SHUTTERSTOCK_API_ENDPOINT,authParameters).then(function(response){return response.json();}).then(function(json){console.log(json);});}},{key:'render',value:function render(){var _this3=this;return _react2.default.createElement('div',{className:'App'},_react2.default.createElement('h2',null,'Quotinerary'),_react2.default.createElement(_Search2.default,{name:this.state.searchTerm,userInput:this.updateInput.bind(this),search:function search(){return _this3.searchImages();},result:this.state.result}),_react2.default.createElement(Image,{images:this.state.images,getAllImages:this.getAllImages.bind(this)}));}}]);return App;}(_react.Component);// return (
+	var authorization=function authorization(){return'Basic '.concat(window.btoa(CLIENT_ID+':'+CLIENT_SECRET));};// console.log(CLIENT_ID, CLIENT_SECRET, authorization());
+	// Shutterstock API requires headers authorization to fetch data from the API
+	var authParameters={headers:{Authorization:authorization()}};var SHUTTERSTOCK_API_ENDPOINT='https://api.shutterstock.com/v2/images/search?per_page=1&query='+this.state.searchTerm;fetch(SHUTTERSTOCK_API_ENDPOINT,authParameters).then(function(r){return r.json();}).then(function(result){// console.log(typeof result);
+	console.log(result.data[0].assets.preview.url);console.log(result.data[0].assets);_this3.setState({image:result.data[0].assets.preview.url});});}},{key:'render',value:function render(){var _this4=this;return _react2.default.createElement('div',{className:'App'},_react2.default.createElement('h2',null,'Quotinerary'),_react2.default.createElement(_Search2.default,{name:this.state.searchTerm,userInput:this.updateInput.bind(this),search:function search(){return _this4.searchImages();},result:this.state.result}),_react2.default.createElement(_Destination2.default,{destinations:this.state.destinations,getAllDestinations:this.getAllDestinations.bind(this)}));}}]);return App;}(_react.Component);// return (
 	//   <div className="App">
 	//     <Nav />
 	//     <MovieList
@@ -7487,14 +7474,7 @@
   \******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);__webpack_require__(/*! ./Search.css */ 180);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Search=function(_Component){_inherits(Search,_Component);function Search(){_classCallCheck(this,Search);return _possibleConstructorReturn(this,(Search.__proto__||Object.getPrototypeOf(Search)).apply(this,arguments));}_createClass(Search,[{key:'render',value:function render(){return _react2.default.createElement('div',null,_react2.default.createElement('input',{type:'text',value:this.props.name,onChange:this.props.userInput}),_react2.default.createElement('button',{onClick:this.props.search},'SEARCH CITY OR COUNTRY'));}}]);return Search;}(_react.Component);exports.default=Search;// <input
-	// type="text"
-	// value={this.props.name}
-	// onChange={this.props.userInput}
-	// />
-	// <h3>{this.props.result.Title}</h3>
-	// <img src={this.props.result.Poster} />
-	// <button onClick={this.props.addToDb}>Add</button>
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);__webpack_require__(/*! ./Search.css */ 180);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Search=function(_Component){_inherits(Search,_Component);function Search(){_classCallCheck(this,Search);return _possibleConstructorReturn(this,(Search.__proto__||Object.getPrototypeOf(Search)).apply(this,arguments));}_createClass(Search,[{key:'render',value:function render(){return _react2.default.createElement('div',null,_react2.default.createElement('input',{type:'text',value:this.props.name,onChange:this.props.userInput}),_react2.default.createElement('button',{onClick:this.props.search},'SEARCH CITY OR COUNTRY'),_react2.default.createElement('h3',null,'Results for: ',this.props.name));}}]);return Search;}(_react.Component);exports.default=Search;// <img src={this.props.result.data[0].assets.preview.url} />
 
 /***/ },
 /* 180 */
@@ -7506,7 +7486,9 @@
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 181 */
+/* 181 */,
+/* 182 */,
+/* 183 */
 /*!************************************!*\
   !*** ./src/components/App/App.css ***!
   \************************************/
@@ -7515,10 +7497,31 @@
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 182 */
+/* 184 */
 /*!***********************!*\
   !*** ./src/index.css ***!
   \***********************/
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 185 */
+/*!****************************************************!*\
+  !*** ./src/components/Destination/Destination.jsx ***!
+  \****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);__webpack_require__(/*! ./Destination.css */ 186);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}// import MovieListItem from '../MovieListItem/MovieListItem';
+	var Image=function(_Component){_inherits(Image,_Component);function Image(){_classCallCheck(this,Image);return _possibleConstructorReturn(this,(Image.__proto__||Object.getPrototypeOf(Image)).apply(this,arguments));}_createClass(Image,[{key:'renderAllDestinations',value:function renderAllDestinations(){return this.props.images.map(function(mov,i){return _react2.default.createElement(Render// title={mov.title}
+	// poster={mov.poster}
+	,{key:i,id:mov.id});});}},{key:'componentWillMount',value:function componentWillMount(){this.props.getAllDestinations();}},{key:'render',value:function render(){return _react2.default.createElement('div',null,_react2.default.createElement('h2',null,'Most Popular Destinations'),this.renderAllDestinations());}}]);return Image;}(_react.Component);exports.default=Destination;
+
+/***/ },
+/* 186 */
+/*!****************************************************!*\
+  !*** ./src/components/Destination/Destination.css ***!
+  \****************************************************/
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

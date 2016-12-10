@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 // import MovieListItem from '../MovieListItem/MovieListItem';
-import './Image.css';
+import './Destination.css';
 
 class Image extends Component {
 
-  renderAllImages() {
+  renderAllDestinations() {
     return this.props.images.map((mov, i) =>
       <Render
         // title={mov.title}
@@ -15,19 +15,16 @@ class Image extends Component {
       )
   }
 
-
   componentWillMount(){
-    this.props.getAllImages();
+    this.props.getAllDestinations();
   }
-
-
 
   render() {
     return(
       <div>
       <h2>Most Popular Destinations</h2>
 
-      {this.renderAllImages()}
+      {this.renderAllDestinations()}
 
       </div>
 
@@ -36,4 +33,4 @@ class Image extends Component {
 }
 
 
-export default Image;
+export default Destination;
