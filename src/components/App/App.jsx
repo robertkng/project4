@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import Search from '../Search/Search.jsx';
 import './App.css';
 
-
+    // const CLIENT_ID = process.env.CLIENT_ID;
+    // const CLIENT_SECRET = process.env.CLIENT_SECRET;
 export default class App extends Component {
     constructor() {
     super();
@@ -23,7 +24,7 @@ export default class App extends Component {
     .then(r => r.json())
     .then((data) => {
       this.setState({
-        // images: data
+        images: data
       });
       // console.log(this.state);
     })
@@ -40,13 +41,17 @@ export default class App extends Component {
   }
 
   searchImages(searchTerm) {
-    console.log('searchImages function');
-  fetch(`http://www.omdbapi.com/?t=${this.state.searchTerm}`)
+    const CLIENT_ID = process.env.CLIENT_ID;
+    const CLIENT_SECRET = process.env.CLIENT_SECRET;
+    console.log(CLIENT_ID, CLIENT_SECRET);
+  // fetch(`https://api.shutterstock.com/v2/images/search?per_page=4&query=${this.state.searchTerm}`)
+  fetch(`https://${CLIENT_ID}:${CLIENT_SECRET}@api.shutterstock.com/v2/images/search?query=${this.state.searchTerm}`)
   .then(r => r.json())
   .then((found) => {
     this.setState({
       result: found
     });
+    console.log('searchImages function');
   })
   .catch(err => console.log(err));
 }

@@ -10,6 +10,7 @@ const cookieParser  = require('cookie-parser');
 const bodyParser = require('body-parser');
 const app     = express();
 const PORT    = process.argv[2] || process.env.port || 3000;
+const images = require('./routes/images');
 // const usersRouter   = require('./routes/api/users');
 // const authRouter    = require('./routes/api/auth');
 // const itinerary = require('./routes/itinerary');
@@ -29,6 +30,7 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 
 // Routes used in our web application
+app.use('/', images);
 // app.use('/api/users', usersRouter);
 // app.use('/api/auth', authRouter);
 // app.use('/', itinerary);
