@@ -1,33 +1,55 @@
+// const pgp = require('pg-promise')();
+// const db = require('../lib/dbconnect');
+
+// // function getAllDestinations(req, res, next) {
+// //   db.any(`SELECT * FROM destinations;`)
+// //   .then((results) => {
+// //     res.destinations = results
+// //     next();
+// //   })
+// //   .catch(err => next(err));
+// // }
+
+// function getAllDestinations(req, res, next) {
+//   db.any(`SELECT * FROM destinations;`)
+//   .then((results) => {
+//     res.status(200)
+//         .json({
+//           status: 'success',
+//           data: results,
+//           message: 'Retrieved ALL destinations'
+//         });
+//   })
+//   .catch(err => next(err));
+// }
+
+
+
+// module.exports = {
+//   getAllDestinations: getAllDestinations,
+//   // addMovie,
+//   // deleteMovie
+// }
+
+
 const pgp = require('pg-promise')();
 const db = require('../lib/dbconnect');
 
 function getAllDestinations(req, res, next) {
   db.any(`SELECT * FROM destinations;`)
   .then((results) => {
-    res.destinations = results
-    next();
+    res.status(200)
+        .json({
+          status: 'success',
+          data: results,
+          message: 'Retrieved ALL destinations'
+        });
   })
   .catch(err => next(err));
 }
 
-// function addMovie(req, res, next) {
-//   console.log(req.body);
-//   // db.none placing data in but not pulling anything
-//   db.none(`INSERT INTO movies (title, poster) VALUES ($1, $2);`, [req.body.Title, req.body.Poster, req.body.Rated, req.body.Runtime])
-//   .then(next())
-//   .catch(err => next(err));
-// }
-
-// function deleteMovie(req, res, next) {
-//   db.result(`DELETE FROM movies
-//     WHERE id = $1;`, [req.params.id])
-//   .then(next())
-//   .catch(err => next(err));
-// }
-
-
 module.exports = {
-  getAllDestinations,
-  // addMovie,
-  // deleteMovie
-}
+  getAllDestinations: getAllDestinations,
+};
+
+
