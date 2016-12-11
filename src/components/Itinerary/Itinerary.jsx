@@ -7,7 +7,9 @@ class Itinerary extends Component {
     <div id="itinerary">
     Itinerary
         <input
+        id="user-itinerary"
         type="text"
+        placeholder="Enter Itinerary. You may copy and paste."
         value={this.props.name}
         onChange={this.props.userInput}
         />
