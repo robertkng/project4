@@ -64,8 +64,8 @@ export default class App extends Component {
     .then(r => r.json())
     .then(result => {
       // console.log(typeof result);
-      console.log(result.data[0].assets.preview.url);
-      console.log(result.data[0].assets);
+      // console.log(result.data[0].assets.preview.url);
+      // console.log(result.data[0].assets);
       this.setState({
         image: result.data[0].assets.preview.url,
       });

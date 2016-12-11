@@ -13,16 +13,14 @@ h3, .Destinations {
 }
 
 .destination {
-  align-content: left;
-
+  width: 300px;
 }
 
 .image {
-  align-content: center;
 }
 
 .itinerary {
-  align-content: right;
+  left: 100%;
 }
 
 h3 {

@@ -24,7 +24,7 @@ class Destination extends Component {
     const destinations = this.props.destinations;
 
     return (
-      <div id="destinations">
+      <div className="destinations">
       <h3>Most popular destinations & activities</h3>
         {this.showDestinations(destinations)}
       </div>

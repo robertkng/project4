@@ -23,13 +23,7 @@ CREATE TABLE destinations (
 
 CREATE TABLE itinerary (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(64) NOT NULL,
-  itinerary VARCHAR(1000) NOT NULL,
-  completed BOOLEAN NOT NULL DEFAULT FALSE,
-  deleted BOOLEAN NOT NULL DEFAULT FALSE,
-  date_created TIMESTAMP NOT NULL DEFAULT NOW(),
-  date_completed TIMESTAMP,
-  date_deleted TIMESTAMP
+  itinerary VARCHAR(20000) NOT NULL,
 );
 
 CREATE INDEX on itinerary (completed) ;
