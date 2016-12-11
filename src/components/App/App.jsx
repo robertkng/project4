@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import Socket from './Socket/Socket.jsx';
 import Search from '../Search/Search.jsx';
 import Destination from '../Destination/Destination.jsx';
+import Image from '../Image/Image.jsx';
 import './App.css';
 
     // const CLIENT_ID = process.env.CLIENT_ID;
@@ -18,19 +19,19 @@ export default class App extends Component {
     };
   }
 
-  getAllDestinations() {
-    console.log('app.jsx');
-    // fetch must be made to middleware route. Client will never see this
-    fetch(`/destinations`)
-    .then(r => r.json())
-    .then((data) => {
-      this.setState({
-        destinations: data
-      });
-      // console.log(this.state);
-    })
-    .catch(err => console.log(err));
-  }
+  // getAllDestinations() {
+  //   console.log('app.jsx');
+  //   // fetch must be made to middleware route. Client will never see this
+  //   fetch(`/destinations`)
+  //   .then(r => r.json())
+  //   .then((data) => {
+  //     this.setState({
+  //       destinations: data
+  //     });
+  //     // console.log(this.state);
+  //   })
+  //   .catch(err => console.log(err));
+  // }
 
     updateInput(e) {
     // let movieTitle = e.target.value;
@@ -46,9 +47,13 @@ searchImages(searchTerm) {
     const CLIENT_ID = process.env.CLIENT_ID;
     const CLIENT_SECRET = process.env.CLIENT_SECRET;
 
+// function authorization() {
+//   return 'Basic '
+// }
+    // send creditials with url, must include 'Basic'
     // window.btoa encodes API credentials just like .env.
     // source: https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/btoa
-    const authorization = () => 'Basic '.concat(window.btoa(`${CLIENT_ID}:${CLIENT_SECRET}`));
+    const authorization = () => 'Basic ' + (window.btoa(`${CLIENT_ID}:${CLIENT_SECRET}`));
     // console.log(CLIENT_ID, CLIENT_SECRET, authorization());
 
     // Shutterstock API requires headers authorization to fetch data from the API
@@ -82,12 +87,15 @@ searchImages(searchTerm) {
             search={()=> this.searchImages()}
             result={this.state.result}
           />
-          <Destination
-            destinations={this.state.destinations}
-            getAllDestinations={this.getAllDestinations.bind(this)}
+          <Image
+            source={this.state.image}
           />
         </div>
     );
   }
 }
 
+          // <Destination
+            // destinations={this.state.destinations}
+            // getAllDestinations={this.getAllDestinations.bind(this)}
+          // />

@@ -7440,21 +7440,40 @@
   \************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);var _Search=__webpack_require__(/*! ../Search/Search.jsx */ 179);var _Search2=_interopRequireDefault(_Search);var _Destination=__webpack_require__(/*! ../Destination/Destination.jsx */ 185);var _Destination2=_interopRequireDefault(_Destination);__webpack_require__(/*! ./App.css */ 183);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}// import Socket from './Socket/Socket.jsx';
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);var _Search=__webpack_require__(/*! ../Search/Search.jsx */ 179);var _Search2=_interopRequireDefault(_Search);var _Destination=__webpack_require__(/*! ../Destination/Destination.jsx */ 185);var _Destination2=_interopRequireDefault(_Destination);var _Image=__webpack_require__(/*! ../Image/Image.jsx */ 181);var _Image2=_interopRequireDefault(_Image);__webpack_require__(/*! ./App.css */ 183);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}// import Socket from './Socket/Socket.jsx';
 	// const CLIENT_ID = process.env.CLIENT_ID;
 	// const CLIENT_SECRET = process.env.CLIENT_SECRET;
 	var App=function(_Component){_inherits(App,_Component);function App(){_classCallCheck(this,App);var _this=_possibleConstructorReturn(this,(App.__proto__||Object.getPrototypeOf(App)).call(this));_this.state={searchTerm:'',destinations:[],// totalResults: 0
-	result:{}};return _this;}_createClass(App,[{key:'getAllDestinations',value:function getAllDestinations(){var _this2=this;console.log('app.jsx');// fetch must be made to middleware route. Client will never see this
-	fetch('/destinations').then(function(r){return r.json();}).then(function(data){_this2.setState({destinations:data});// console.log(this.state);
-	}).catch(function(err){return console.log(err);});}},{key:'updateInput',value:function updateInput(e){// let movieTitle = e.target.value;
+	result:{}};return _this;}// getAllDestinations() {
+	//   console.log('app.jsx');
+	//   // fetch must be made to middleware route. Client will never see this
+	//   fetch(`/destinations`)
+	//   .then(r => r.json())
+	//   .then((data) => {
+	//     this.setState({
+	//       destinations: data
+	//     });
+	//     // console.log(this.state);
+	//   })
+	//   .catch(err => console.log(err));
+	// }
+	_createClass(App,[{key:'updateInput',value:function updateInput(e){// let movieTitle = e.target.value;
 	this.setState({// searchTerm: movieTitle
-	searchTerm:e.target.value});console.log(this.state.searchTerm);}},{key:'searchImages',value:function searchImages(searchTerm){var _this3=this;// Set variable for API credentials
-	var CLIENT_ID=("9debd6d8d3c9644df10d");var CLIENT_SECRET=("e9bb5e577bdcc6b30c1bad26a095c627ebd2688d");// window.btoa encodes API credentials just like .env.
+	searchTerm:e.target.value});console.log(this.state.searchTerm);}},{key:'searchImages',value:function searchImages(searchTerm){var _this2=this;// Set variable for API credentials
+	var CLIENT_ID=("9debd6d8d3c9644df10d");var CLIENT_SECRET=("e9bb5e577bdcc6b30c1bad26a095c627ebd2688d");// function authorization() {
+	//   return 'Basic '
+	// }
+	// send creditials with url, must include 'Basic'
+	// window.btoa encodes API credentials just like .env.
 	// source: https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/btoa
-	var authorization=function authorization(){return'Basic '.concat(window.btoa(CLIENT_ID+':'+CLIENT_SECRET));};// console.log(CLIENT_ID, CLIENT_SECRET, authorization());
+	var authorization=function authorization(){return'Basic '+window.btoa(CLIENT_ID+':'+CLIENT_SECRET);};// console.log(CLIENT_ID, CLIENT_SECRET, authorization());
 	// Shutterstock API requires headers authorization to fetch data from the API
 	var authParameters={headers:{Authorization:authorization()}};var SHUTTERSTOCK_API_ENDPOINT='https://api.shutterstock.com/v2/images/search?per_page=1&query='+this.state.searchTerm;fetch(SHUTTERSTOCK_API_ENDPOINT,authParameters).then(function(r){return r.json();}).then(function(result){// console.log(typeof result);
-	console.log(result.data[0].assets.preview.url);console.log(result.data[0].assets);_this3.setState({image:result.data[0].assets.preview.url});});}},{key:'render',value:function render(){var _this4=this;return _react2.default.createElement('div',{className:'App'},_react2.default.createElement('h2',null,'Quotinerary'),_react2.default.createElement(_Search2.default,{name:this.state.searchTerm,userInput:this.updateInput.bind(this),search:function search(){return _this4.searchImages();},result:this.state.result}),_react2.default.createElement(_Destination2.default,{destinations:this.state.destinations,getAllDestinations:this.getAllDestinations.bind(this)}));}}]);return App;}(_react.Component);exports.default=App;
+	console.log(result.data[0].assets.preview.url);console.log(result.data[0].assets);_this2.setState({image:result.data[0].assets.preview.url});});}},{key:'render',value:function render(){var _this3=this;return _react2.default.createElement('div',{className:'App'},_react2.default.createElement('h2',null,'Quotinerary'),_react2.default.createElement(_Search2.default,{name:this.state.searchTerm,userInput:this.updateInput.bind(this),search:function search(){return _this3.searchImages();},result:this.state.result}),_react2.default.createElement(_Image2.default,{source:this.state.image}));}}]);return App;}(_react.Component);// <Destination
+	// destinations={this.state.destinations}
+	// getAllDestinations={this.getAllDestinations.bind(this)}
+	// />
+	exports.default=App;
 
 /***/ },
 /* 179 */
@@ -7475,7 +7494,15 @@
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 181 */,
+/* 181 */
+/*!****************************************!*\
+  !*** ./src/components/Image/Image.jsx ***!
+  \****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Images=function(_Component){_inherits(Images,_Component);function Images(){_classCallCheck(this,Images);return _possibleConstructorReturn(this,(Images.__proto__||Object.getPrototypeOf(Images)).apply(this,arguments));}_createClass(Images,[{key:"render",value:function render(){return _react2.default.createElement("div",{className:"image"},this.props.source?_react2.default.createElement("img",{src:this.props.source}):null);}}]);return Images;}(_react.Component);exports.default=Images;
+
+/***/ },
 /* 182 */,
 /* 183 */
 /*!************************************!*\

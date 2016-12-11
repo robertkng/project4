@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
 // const { addImages, deleteImages, getAllImages } = require('../models/images');
-const { getAllDestinations } = require('../models/destination');
+// const { getAllDestinations } = require('../models/destination');
 const { searchImages } = require('../services/images');
 
-router.get('/destinations', getAllDestinations, (req, res) => {
-  res.json(res.destinations || []);
-})
+// router.get('/destinations', getAllDestinations, (req, res) => {
+//   res.json(res.destinations || []);
+// })
 
 // router.post('/images', addImages, (req, res) => {
 //   res.json(res.images || []);
