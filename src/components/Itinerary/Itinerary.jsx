@@ -6,7 +6,7 @@ class Itinerary extends Component {
     return (
     <div id="itinerary">
     Itinerary
-        <input
+        <textarea
         id="user-itinerary"
         type="text"
         placeholder="Enter Itinerary. You may copy and paste."
