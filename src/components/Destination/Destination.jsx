@@ -7,14 +7,14 @@ class Destination extends Component {
     this.props.getAllDestinations();
   }
 
-    showDestinations(destinations) {
-
+  showDestinations(destinations) {
+    // const regex = /(<br \/>)/g;
     return destinations.map((render, index) => {
       return (
         <ul key={index} className="results-container">
-        <li>{render.city}</li>
-        <li>{render.country}</li>
-        <li>{render.activity}</li>
+          <li>{render.city}, </li>
+          <li>{render.country}</li>
+          <li>{render.activity}</li>
         </ul>
       );
     });
@@ -24,7 +24,8 @@ class Destination extends Component {
     const destinations = this.props.destinations;
 
     return (
-      <div>
+      <div id="destinations">
+      <h3>Most popular destinations & activities</h3>
         {this.showDestinations(destinations)}
       </div>
     )

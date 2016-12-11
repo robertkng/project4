@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Search from '../Search/Search.jsx';
 import Image from '../Image/Image.jsx';
 import Destination from '../Destination/Destination.jsx';
+import Itinerary from '../Itinerary/Itinerary.jsx';
 import './App.css';
 
 export default class App extends Component {
@@ -75,6 +76,8 @@ export default class App extends Component {
     return (
       <div className="App">
         <h2>Quotinerary</h2>
+
+
         <Search
           name={this.state.searchTerm}
           userInput={this.updateInput.bind(this)}
@@ -82,16 +85,27 @@ export default class App extends Component {
           result={this.state.result}
         />
 
-        <Image
-          source={this.state.image}
-        />
+        <div id="container">
+        <div className="destination">
+          <Destination
+            destinations={this.state.destinations}
+            getAllDestinations={this.getAllDestinations.bind(this)}
+          />
+        </div>
 
+        <div className="image">
+          <Image
+            source={this.state.image}
+          />
+        </div>
 
-        <h3>Most popular destinations & activities</h3>
-        <Destination
-          destinations={this.state.destinations}
-          getAllDestinations={this.getAllDestinations.bind(this)}
-        />
+        <div className="itinerary">
+          <Itinerary
+            userInput={this.updateInput.bind(this)}
+          />
+        </div>
+        </div>
+
       </div>
     );
   }

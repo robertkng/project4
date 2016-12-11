@@ -7,7 +7,7 @@ export default class Images extends Component {
   render() {
     return (
       <div className="image">
-      <h4>Results for: {this.props.name}</h4>
+      <h3>Results for: {this.props.name}</h3>
         { this.props.source ? <img src={this.props.source} /> : null }
       </div>
     );
