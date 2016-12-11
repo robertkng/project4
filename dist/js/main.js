@@ -7440,112 +7440,19 @@
   \************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);var _Search=__webpack_require__(/*! ../Search/Search.jsx */ 179);var _Search2=_interopRequireDefault(_Search);var _Image=__webpack_require__(/*! ../Image/Image.jsx */ 185);var _Image2=_interopRequireDefault(_Image);var _Destination=__webpack_require__(/*! ../Destination/Destination.jsx */ 181);var _Destination2=_interopRequireDefault(_Destination);__webpack_require__(/*! ./App.css */ 183);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}// import React, { Component } from 'react';
-	// // import Socket from './Socket/Socket.jsx';
-	// import Search from '../Search/Search.jsx';
-	// import Destination from '../Destination/Destination.jsx';
-	// import Image from '../Image/Image.jsx';
-	// import './App.css';
-	//     // const CLIENT_ID = process.env.CLIENT_ID;
-	//     // const CLIENT_SECRET = process.env.CLIENT_SECRET;
-	// export default class App extends Component {
-	//     constructor() {
-	//     super();
-	//     this.state = {
-	//       searchTerm: '',
-	//       destinations: [],
-	//       // totalResults: 0
-	//       result: {}
-	//     };
-	//   }
-	//   getAllDestinations() {
-	//     console.log('app.jsx');
-	//     // fetch must be made to middleware route. Client will never see this
-	//     fetch(`/api/destinations`)
-	//     .then(r => r.json())
-	//     .then((results) => {
-	//       this.setState({
-	//         destinations: results.data
-	//       });
-	//       // console.log(this.state);
-	//     })
-	//     .catch(err => console.log(err));
-	//   }
-	//     updateInput(e) {
-	//     // let movieTitle = e.target.value;
-	//     this.setState({
-	//       // searchTerm: movieTitle
-	//       searchTerm: e.target.value
-	//     })
-	//     console.log(this.state.searchTerm);
-	//   }
-	// searchImages(searchTerm) {
-	//     // Set variable for API credentials
-	//     const CLIENT_ID = process.env.CLIENT_ID;
-	//     const CLIENT_SECRET = process.env.CLIENT_SECRET;
-	// // function authorization() {
-	// //   return 'Basic '
-	// // }
-	//     // send creditials with url, must include 'Basic'
-	//     // window.btoa encodes API credentials just like .env.
-	//     // source: https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/btoa
-	//     const authorization = () => 'Basic ' + (window.btoa(`${CLIENT_ID}:${CLIENT_SECRET}`));
-	//     // console.log(CLIENT_ID, CLIENT_SECRET, authorization());
-	//     // Shutterstock API requires headers authorization to fetch data from the API
-	//     const authParameters = {
-	//       headers: {
-	//         Authorization: authorization()
-	//       }
-	//     };
-	//     const SHUTTERSTOCK_API_ENDPOINT = `https://api.shutterstock.com/v2/images/search?per_page=1&query=${this.state.searchTerm}`;
-	//     fetch(SHUTTERSTOCK_API_ENDPOINT, authParameters)
-	//     .then(r => r.json())
-	//     .then(result => {
-	//       // console.log(typeof result);
-	//       console.log(result.data[0].assets.preview.url);
-	//       console.log(result.data[0].assets);
-	//       this.setState({
-	//         image: result.data[0].assets.preview.url,
-	//       });
-	//     });
-	//   }
-	//   render() {
-	//     return (
-	//       <div className="App">
-	//           <h2>Quotinerary</h2>
-	//           <Search
-	//             name={this.state.searchTerm}
-	//             userInput={this.updateInput.bind(this)}
-	//             search={()=> this.searchImages()}
-	//             result={this.state.result}
-	//           />
-	//           <Image
-	//             source={this.state.image}
-	//           />
-	//           <Destination
-	//             destinations={this.state.destinations}
-	//             getAllDestinations={this.getAllDestinations.bind(this)}
-	//           />
-	//         </div>
-	//     );
-	//   }
-	// }
-	// import Socket from './Socket/Socket.jsx';
-	// const CLIENT_ID = process.env.CLIENT_ID;
-	// const CLIENT_SECRET = process.env.CLIENT_SECRET;
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);var _Search=__webpack_require__(/*! ../Search/Search.jsx */ 179);var _Search2=_interopRequireDefault(_Search);var _Image=__webpack_require__(/*! ../Image/Image.jsx */ 185);var _Image2=_interopRequireDefault(_Image);var _Destination=__webpack_require__(/*! ../Destination/Destination.jsx */ 181);var _Destination2=_interopRequireDefault(_Destination);__webpack_require__(/*! ./App.css */ 183);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}// import Socket from './Socket/Socket.jsx';
 	var App=function(_Component){_inherits(App,_Component);function App(){_classCallCheck(this,App);var _this=_possibleConstructorReturn(this,(App.__proto__||Object.getPrototypeOf(App)).call(this));_this.state={searchTerm:'',destinations:[],// totalResults: 0
 	result:{}};return _this;}_createClass(App,[{key:'getAllDestinations',value:function getAllDestinations(){var _this2=this;console.log('app.jsx');// fetch must be made to middleware route. Client will never see this
 	fetch('/api/destinations').then(function(r){return r.json();}).then(function(results){_this2.setState({destinations:results.data});// console.log(this.state);
-	}).catch(function(err){return console.log(err);});}},{key:'updateInput',value:function updateInput(e){// let movieTitle = e.target.value;
-	this.setState({// searchTerm: movieTitle
-	searchTerm:e.target.value});console.log(this.state.searchTerm);}},{key:'searchImages',value:function searchImages(searchTerm){var _this3=this;// Set variable for API credentials
-	var CLIENT_ID=("9debd6d8d3c9644df10d");var CLIENT_SECRET=("e9bb5e577bdcc6b30c1bad26a095c627ebd2688d");// window.btoa encodes API credentials just like .env.
+	}).catch(function(err){return console.log(err);});}},{key:'updateInput',value:function updateInput(e){this.setState({searchTerm:e.target.value});console.log(this.state.searchTerm);}},{key:'searchImages',value:function searchImages(searchTerm){var _this3=this;// Set variable for API credentials
+	var CLIENT_ID=("9debd6d8d3c9644df10d");var CLIENT_SECRET=("e9bb5e577bdcc6b30c1bad26a095c627ebd2688d");// In the context of a HTTP transaction, basic access authentication is a method
+	// for a HTTP user agent to provide a user name and password when making a request.
+	// window.btoa encodes API credentials just like .env.
 	// source: https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/btoa
-	// In the context of a HTTP transaction, basic access authentication is a method for a HTTP user agent to provide a user name and password when making a request.
-	var authorization=function authorization(){return'Basic '.concat(window.btoa(CLIENT_ID+':'+CLIENT_SECRET));};// console.log(CLIENT_ID, CLIENT_SECRET, authorization());
+	var authorization=function authorization(){return'Basic '+window.btoa(CLIENT_ID+':'+CLIENT_SECRET);};// console.log(CLIENT_ID, CLIENT_SECRET, authorization());
 	// Shutterstock API requires headers authorization to fetch data from the API
 	var authParameters={headers:{Authorization:authorization()}};var SHUTTERSTOCK_API_ENDPOINT='https://api.shutterstock.com/v2/images/search?per_page=1&query='+this.state.searchTerm;fetch(SHUTTERSTOCK_API_ENDPOINT,authParameters).then(function(r){return r.json();}).then(function(result){// console.log(typeof result);
-	console.log(result.data[0].assets.preview.url);console.log(result.data[0].assets);_this3.setState({image:result.data[0].assets.preview.url});});}},{key:'render',value:function render(){var _this4=this;return _react2.default.createElement('div',{className:'App'},_react2.default.createElement('h2',null,'Quotinerary'),_react2.default.createElement(_Search2.default,{name:this.state.searchTerm,userInput:this.updateInput.bind(this),search:function search(){return _this4.searchImages();},result:this.state.result}),_react2.default.createElement(_Image2.default,{source:this.state.image}),_react2.default.createElement(_Destination2.default,{destinations:this.state.destinations,getAllDestinations:this.getAllDestinations.bind(this)}));}}]);return App;}(_react.Component);exports.default=App;
+	console.log(result.data[0].assets.preview.url);console.log(result.data[0].assets);_this3.setState({image:result.data[0].assets.preview.url});});}},{key:'render',value:function render(){var _this4=this;return _react2.default.createElement('div',{className:'App'},_react2.default.createElement('h2',null,'Quotinerary'),_react2.default.createElement(_Search2.default,{name:this.state.searchTerm,userInput:this.updateInput.bind(this),search:function search(){return _this4.searchImages();},result:this.state.result}),_react2.default.createElement(_Image2.default,{source:this.state.image}),_react2.default.createElement('h3',null,'Most popular destinations & activities'),_react2.default.createElement(_Destination2.default,{destinations:this.state.destinations,getAllDestinations:this.getAllDestinations.bind(this)}));}}]);return App;}(_react.Component);exports.default=App;
 
 /***/ },
 /* 179 */
@@ -7554,7 +7461,7 @@
   \******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);__webpack_require__(/*! ./Search.css */ 180);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Search=function(_Component){_inherits(Search,_Component);function Search(){_classCallCheck(this,Search);return _possibleConstructorReturn(this,(Search.__proto__||Object.getPrototypeOf(Search)).apply(this,arguments));}_createClass(Search,[{key:'render',value:function render(){return _react2.default.createElement('div',null,_react2.default.createElement('input',{type:'text',value:this.props.name,onChange:this.props.userInput}),_react2.default.createElement('button',{onClick:this.props.search},'SEARCH CITY OR COUNTRY'),_react2.default.createElement('h3',null,'Results for: ',this.props.name));}}]);return Search;}(_react.Component);exports.default=Search;// <img src={this.props.result.data[0].assets.preview.url} />
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);__webpack_require__(/*! ./Search.css */ 180);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Search=function(_Component){_inherits(Search,_Component);function Search(){_classCallCheck(this,Search);return _possibleConstructorReturn(this,(Search.__proto__||Object.getPrototypeOf(Search)).apply(this,arguments));}_createClass(Search,[{key:'render',value:function render(){return _react2.default.createElement('div',{id:'search'},_react2.default.createElement('input',{type:'text',value:this.props.name,onChange:this.props.userInput}),_react2.default.createElement('button',{onClick:this.props.search},'SEARCH CITY OR COUNTRY'));}}]);return Search;}(_react.Component);exports.default=Search;
 
 /***/ },
 /* 180 */
@@ -7572,29 +7479,7 @@
   \****************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);__webpack_require__(/*! ./Destination.css */ 182);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}// import React, { Component } from 'react';
-	// import './Destination.css';
-	// class Destination extends Component {
-	// componentWillMount(){
-	//     this.props.getAllDestinations();
-	//   }
-	//   render() {
-	//     return this.props.destinations.map((destination, i) =>
-	//       <div>
-	//       <h2>Most Popular Destinations</h2>
-	//         <ul>
-	//           <li>{destination.city}</li>
-	//           <li>{destination.country}</li>
-	//           <li>{i}</li>
-	//           <li>{destination.id}</li>
-	//         </ul>
-	//       </div>
-	//       )
-	//     };
-	// }
-	// export default Destination;
-	var Destination=function(_Component){_inherits(Destination,_Component);function Destination(){_classCallCheck(this,Destination);return _possibleConstructorReturn(this,(Destination.__proto__||Object.getPrototypeOf(Destination)).apply(this,arguments));}_createClass(Destination,[{key:'componentWillMount',value:function componentWillMount(){this.props.getAllDestinations();}},{key:'showDestinations',value:function showDestinations(destinations){// const timestamp = new Date().getUTCMilliseconds();
-	return destinations.map(function(cities,index){console.log(cities);return _react2.default.createElement('li',{key:index},cities.city);});}},{key:'render',value:function render(){var destinations=this.props.destinations;return _react2.default.createElement('ul',null,destinations.length?this.showDestinations(destinations):"No destinations");}}]);return Destination;}(_react.Component);exports.default=Destination;
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);__webpack_require__(/*! ./Destination.css */ 182);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Destination=function(_Component){_inherits(Destination,_Component);function Destination(){_classCallCheck(this,Destination);return _possibleConstructorReturn(this,(Destination.__proto__||Object.getPrototypeOf(Destination)).apply(this,arguments));}_createClass(Destination,[{key:'componentWillMount',value:function componentWillMount(){this.props.getAllDestinations();}},{key:'showDestinations',value:function showDestinations(destinations){return destinations.map(function(render,index){return _react2.default.createElement('ul',{key:index,className:'results-container'},_react2.default.createElement('li',null,render.city),_react2.default.createElement('li',null,render.country),_react2.default.createElement('li',null,render.activity));});}},{key:'render',value:function render(){var destinations=this.props.destinations;return _react2.default.createElement('div',null,this.showDestinations(destinations));}}]);return Destination;}(_react.Component);exports.default=Destination;
 
 /***/ },
 /* 182 */
@@ -7630,7 +7515,8 @@
   \****************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Images=function(_Component){_inherits(Images,_Component);function Images(){_classCallCheck(this,Images);return _possibleConstructorReturn(this,(Images.__proto__||Object.getPrototypeOf(Images)).apply(this,arguments));}_createClass(Images,[{key:"render",value:function render(){return _react2.default.createElement("div",{className:"image"},this.props.source?_react2.default.createElement("img",{src:this.props.source}):null);}}]);return Images;}(_react.Component);exports.default=Images;
+	"use strict";Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}// render an image from the destination that is searched
+	var Images=function(_Component){_inherits(Images,_Component);function Images(){_classCallCheck(this,Images);return _possibleConstructorReturn(this,(Images.__proto__||Object.getPrototypeOf(Images)).apply(this,arguments));}_createClass(Images,[{key:"render",value:function render(){return _react2.default.createElement("div",{className:"image"},_react2.default.createElement("h4",null,"Results for: ",this.props.name),this.props.source?_react2.default.createElement("img",{src:this.props.source}):null);}}]);return Images;}(_react.Component);exports.default=Images;
 
 /***/ }
 /******/ ]);

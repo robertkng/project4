@@ -1,24 +1,22 @@
-.App {
+h2 {
+  font-size: 36px;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+h3, .Destinations {
+  font-size: 26px;
+  text-align: left;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+h4 {
+  text-align: center;
+  font-size: 26px;
 }
 
-.App-intro {
-  font-size: large;
-}
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  /*flex-direction: row;*/
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
