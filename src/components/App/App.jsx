@@ -13,6 +13,7 @@ export default class App extends Component {
     this.state = {
       searchTerm: '',
       destinations: [],
+      // itineraryText: '',
       // totalResults: 0
       result: {}
     };
@@ -75,7 +76,7 @@ export default class App extends Component {
   }
 
   addToDb(e) {
-    return fetch(`/itinerary`, {
+    return fetch(`/itinerary/itinerary`, {
       headers: {
         'Content-Type': 'application/json'
       },
@@ -85,25 +86,38 @@ export default class App extends Component {
     .catch()
   }
 
-    getVisionData(url) {
-    fetch('/vision', {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8'
-      },
-      body: JSON.stringify({ 'url': url }),
-    })
-    .then(r => r.json())
-    .then((data) => {
-      console.log(data)
-      this.setState({
-        counter: 2,
-        visionText: data.description.captions[0].text,
-        CrosshairHover: ''
-      })
-    })
-    .catch(err => console.log(err))
-  }
+// // Function call that posts to the body of the /itinerary text as a string, then
+// // passes JSON as props to respective component
+//   getItineraryData(text) {
+//     fetch('/itinerary', {
+//       method: 'POST',
+//       headers: {
+//         'Content-type': 'application/json; charset=UTF-8'
+//       },
+//       body: JSON.stringify({ 'text': text }),
+//     })
+//     .then(r => r.json())
+//     .then((data) => {
+//       console.log(data)
+//       this.setState({
+//         itineraryText: data.description.captions[0].text,
+//       })
+//     })
+//     .catch(err => console.log(err))
+//   }
+
+//   // Function call from the /itinerary url that passes the objects in JSON format as
+// // props
+//   getItinerary(){
+//     fetch(`/itinerary`)
+//     .then(r => r.json())
+//     .then((data) => {
+//       this.setState({
+//         itineraryText: data
+//       })
+//     })
+//     .catch(err => console.log(err))
+//   }
 
   render() {
     return (
@@ -134,7 +148,7 @@ export default class App extends Component {
 
         <div className="itinerary">
           <Itinerary
-            userInput={this.updateInput.bind(this)}
+            result={this.state.result}
             addToDb={this.addToDb.bind(this)}
           />
         </div>
@@ -144,3 +158,5 @@ export default class App extends Component {
     );
   }
 }
+            // itineraryText={this.state.itineraryText}
+            // getItineraryData={this.getItineraryData.bind(this)}

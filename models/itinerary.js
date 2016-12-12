@@ -1,5 +1,5 @@
 const pgp = require('pg-promise')();
-const db = require('../db/db');
+const db = require('../lib/dbconnect');
 
 // Function call that adds the input data into the itinerary database
 function addItinerary(req, res, next) {
