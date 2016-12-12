@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Itinerary.css';
 
-class Itinerary extends Component {
-  render() {
-    return (
+
+const Itinerary = props => (
     <div className="itinerary">
     <h3> Your Itinerary </h3>
         <textarea
@@ -11,15 +10,15 @@ class Itinerary extends Component {
         type="text"
         maxLength="20000"
         placeholder="You may type out or copy and paste your itinerary. Be as specific as you can with your flight schedule, if you need a hotel, pick up / drop off time and date, places you want to visit, or if you just want to be driven around. (No more than 20,000 characters)"
-        value={this.props.name}
-        onChange={this.props.userInput}
+        value={props.name}
+        // onChange={props.userInput}
         />
-        <button onClick={this.props.addToDb}>SUBMIT FOR PRICE QUOTE</button>
-    </div>
-    )
-  }
-}
 
+<button onClick={props.addToDb}>SUBMIT FOR PRICE QUOTE</button>
+
+
+    </div>
+    );
 
 export default Itinerary;
 

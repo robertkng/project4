@@ -11,7 +11,7 @@ export default class App extends Component {
     super();
 
     this.state = {
-      searchTerm: '',
+      searchTerm: 'dsfsdfdf',
       destinations: [],
       // itineraryText: '',
       // totalResults: 0
@@ -76,15 +76,19 @@ export default class App extends Component {
   }
 
   addToDb(e) {
-    return fetch(`/itinerary/itinerary`, {
+    fetch('/itinerary/itinerary', {
       headers: {
         'Content-Type': 'application/json'
       },
       method: 'POST',
-      body: JSON.stringify(this.state.result)
+      body: JSON.stringify({
+        searchTerm: this.state.searchTerm,
+      })
     })
-    .catch()
+    .catch(err => console.log(err));
   }
+
+
 
 // // Function call that posts to the body of the /itinerary text as a string, then
 // // passes JSON as props to respective component
@@ -148,8 +152,10 @@ export default class App extends Component {
 
         <div className="itinerary">
           <Itinerary
-            result={this.state.result}
+            // result={this.state.result}
             addToDb={this.addToDb.bind(this)}
+            // userInput={this.userInput.bind(this)}
+            name={this.state.searchTerm}
           />
         </div>
         </div>

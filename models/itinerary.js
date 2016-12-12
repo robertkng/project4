@@ -3,7 +3,8 @@ const db = require('../lib/dbconnect');
 
 // Function call that adds the input data into the itinerary database
 function addItinerary(req, res, next) {
- db.none(`INSERT INTO itinerary (itinerary) VALUES ($1);`, [req.body.itinerary])
+ db.none(`INSERT INTO itinerary (itinerary)
+          VALUES ($1);`, [req.body.searchTerm])
  .then(next())
  .catch(err => next(err));
 }
