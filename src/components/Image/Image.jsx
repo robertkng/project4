@@ -9,7 +9,7 @@ export default class Images extends Component {
       <div className="image">
       <h3>Results: {this.props.name}</h3>
         { this.props.source ?
-          <video autoPlay>
+          <video autoPlay loop>
             <source src={this.props.source} />
           </video>
            : null }
