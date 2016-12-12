@@ -11,7 +11,7 @@ export default class App extends Component {
     super();
 
     this.state = {
-      searchTerm: 'dsfsdfdf',
+      searchTerm: '',
       destinations: [],
       // itineraryText: '',
       // totalResults: 0
@@ -35,7 +35,8 @@ export default class App extends Component {
 
   updateInput(e) {
     this.setState({
-      searchTerm: e.target.value
+      result: e.target.value
+      // result: e.target.value
     })
     console.log(this.state.searchTerm);
   }
@@ -75,6 +76,15 @@ export default class App extends Component {
     });
   }
 
+  updateInput(e) {
+    // let movieTitle = e.target.value;
+    this.setState({
+      // searchTerm: movieTitle
+      result: e.target.value
+    })
+    console.log(this.state.result);
+  }
+
   addToDb(e) {
     fetch('/itinerary/itinerary', {
       headers: {
@@ -82,46 +92,11 @@ export default class App extends Component {
       },
       method: 'POST',
       body: JSON.stringify({
-        searchTerm: this.state.searchTerm,
+        itinerary: this.state.result,
       })
     })
     .catch(err => console.log(err));
   }
-
-
-
-// // Function call that posts to the body of the /itinerary text as a string, then
-// // passes JSON as props to respective component
-//   getItineraryData(text) {
-//     fetch('/itinerary', {
-//       method: 'POST',
-//       headers: {
-//         'Content-type': 'application/json; charset=UTF-8'
-//       },
-//       body: JSON.stringify({ 'text': text }),
-//     })
-//     .then(r => r.json())
-//     .then((data) => {
-//       console.log(data)
-//       this.setState({
-//         itineraryText: data.description.captions[0].text,
-//       })
-//     })
-//     .catch(err => console.log(err))
-//   }
-
-//   // Function call from the /itinerary url that passes the objects in JSON format as
-// // props
-//   getItinerary(){
-//     fetch(`/itinerary`)
-//     .then(r => r.json())
-//     .then((data) => {
-//       this.setState({
-//         itineraryText: data
-//       })
-//     })
-//     .catch(err => console.log(err))
-//   }
 
   render() {
     return (
@@ -153,9 +128,10 @@ export default class App extends Component {
         <div className="itinerary">
           <Itinerary
             // result={this.state.result}
+            userInput={this.updateInput.bind(this)}
+            // userItinerary={this.updateInput.bind(this)}
             addToDb={this.addToDb.bind(this)}
-            // userInput={this.userInput.bind(this)}
-            name={this.state.searchTerm}
+            // name={this.state.result}
           />
         </div>
         </div>

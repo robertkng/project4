@@ -10,12 +10,10 @@ const Itinerary = props => (
         type="text"
         maxLength="20000"
         placeholder="You may type out or copy and paste your itinerary. Be as specific as you can with your flight schedule, if you need a hotel, pick up / drop off time and date, places you want to visit, or if you just want to be driven around. (No more than 20,000 characters)"
-        value={props.name}
-        // onChange={props.userInput}
+        value={props.input}
+        onChange={props.userInput}
         />
-
-<button onClick={props.addToDb}>SUBMIT FOR PRICE QUOTE</button>
-
+        <button onClick={props.addToDb}>SUBMIT FOR PRICE QUOTE</button>
 
     </div>
     );

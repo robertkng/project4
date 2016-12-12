@@ -7441,11 +7441,12 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);var _Search=__webpack_require__(/*! ../Search/Search.jsx */ 179);var _Search2=_interopRequireDefault(_Search);var _Image=__webpack_require__(/*! ../Image/Image.jsx */ 181);var _Image2=_interopRequireDefault(_Image);var _Destination=__webpack_require__(/*! ../Destination/Destination.jsx */ 182);var _Destination2=_interopRequireDefault(_Destination);var _Itinerary=__webpack_require__(/*! ../Itinerary/Itinerary.jsx */ 184);var _Itinerary2=_interopRequireDefault(_Itinerary);__webpack_require__(/*! ./App.css */ 186);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}// import Socket from './Socket/Socket.jsx';
-	var App=function(_Component){_inherits(App,_Component);function App(){_classCallCheck(this,App);var _this=_possibleConstructorReturn(this,(App.__proto__||Object.getPrototypeOf(App)).call(this));_this.state={searchTerm:'dsfsdfdf',destinations:[],// itineraryText: '',
+	var App=function(_Component){_inherits(App,_Component);function App(){_classCallCheck(this,App);var _this=_possibleConstructorReturn(this,(App.__proto__||Object.getPrototypeOf(App)).call(this));_this.state={searchTerm:'',destinations:[],// itineraryText: '',
 	// totalResults: 0
 	result:{}};return _this;}_createClass(App,[{key:'getAllDestinations',value:function getAllDestinations(){var _this2=this;console.log('app.jsx');// fetch must be made to middleware route. Client will never see this
 	fetch('/api/destinations').then(function(r){return r.json();}).then(function(results){_this2.setState({destinations:results.data});// console.log(this.state);
-	}).catch(function(err){return console.log(err);});}},{key:'updateInput',value:function updateInput(e){this.setState({searchTerm:e.target.value});console.log(this.state.searchTerm);}},{key:'searchImages',value:function searchImages(searchTerm){var _this3=this;// Set variable for API credentials
+	}).catch(function(err){return console.log(err);});}},{key:'updateInput',value:function updateInput(e){this.setState({result:e.target.value// result: e.target.value
+	});console.log(this.state.searchTerm);}},{key:'searchImages',value:function searchImages(searchTerm){var _this3=this;// Set variable for API credentials
 	var CLIENT_ID=("9debd6d8d3c9644df10d");var CLIENT_SECRET=("e9bb5e577bdcc6b30c1bad26a095c627ebd2688d");// In the context of a HTTP transaction, basic access authentication is a method
 	// for a HTTP user agent to provide a user name and password when making a request.
 	// window.btoa encodes API credentials just like .env.
@@ -7456,40 +7457,12 @@
 	console.log(result);// console.log(result.data[0].assets.preview.url);
 	// console.log(result.data[0].assets);
 	_this3.setState({// image: result.data[0].assets.preview.url,
-	image:result.data[0].assets.preview_mp4.url});});}},{key:'addToDb',value:function addToDb(e){fetch('/itinerary/itinerary',{headers:{'Content-Type':'application/json'},method:'POST',body:JSON.stringify({searchTerm:this.state.searchTerm})}).catch(function(err){return console.log(err);});}// // Function call that posts to the body of the /itinerary text as a string, then
-	// // passes JSON as props to respective component
-	//   getItineraryData(text) {
-	//     fetch('/itinerary', {
-	//       method: 'POST',
-	//       headers: {
-	//         'Content-type': 'application/json; charset=UTF-8'
-	//       },
-	//       body: JSON.stringify({ 'text': text }),
-	//     })
-	//     .then(r => r.json())
-	//     .then((data) => {
-	//       console.log(data)
-	//       this.setState({
-	//         itineraryText: data.description.captions[0].text,
-	//       })
-	//     })
-	//     .catch(err => console.log(err))
-	//   }
-	//   // Function call from the /itinerary url that passes the objects in JSON format as
-	// // props
-	//   getItinerary(){
-	//     fetch(`/itinerary`)
-	//     .then(r => r.json())
-	//     .then((data) => {
-	//       this.setState({
-	//         itineraryText: data
-	//       })
-	//     })
-	//     .catch(err => console.log(err))
-	//   }
-	},{key:'render',value:function render(){var _this4=this;return _react2.default.createElement('div',{className:'App'},_react2.default.createElement('h2',null,'Quotinerary'),_react2.default.createElement(_Search2.default,{name:this.state.searchTerm,userInput:this.updateInput.bind(this),search:function search(){return _this4.searchImages();},result:this.state.result}),_react2.default.createElement('div',{id:'container'},_react2.default.createElement('div',{className:'destination'},_react2.default.createElement(_Destination2.default,{destinations:this.state.destinations,getAllDestinations:this.getAllDestinations.bind(this)})),_react2.default.createElement('div',{className:'image'},_react2.default.createElement(_Image2.default,{source:this.state.image})),_react2.default.createElement('div',{className:'itinerary'},_react2.default.createElement(_Itinerary2.default// result={this.state.result}
-	,{addToDb:this.addToDb.bind(this)// userInput={this.userInput.bind(this)}
-	,name:this.state.searchTerm}))));}}]);return App;}(_react.Component);// itineraryText={this.state.itineraryText}
+	image:result.data[0].assets.preview_mp4.url});});}},{key:'updateInput',value:function updateInput(e){// let movieTitle = e.target.value;
+	this.setState({// searchTerm: movieTitle
+	result:e.target.value});console.log(this.state.result);}},{key:'addToDb',value:function addToDb(e){fetch('/itinerary/itinerary',{headers:{'Content-Type':'application/json'},method:'POST',body:JSON.stringify({itinerary:this.state.result})}).catch(function(err){return console.log(err);});}},{key:'render',value:function render(){var _this4=this;return _react2.default.createElement('div',{className:'App'},_react2.default.createElement('h2',null,'Quotinerary'),_react2.default.createElement(_Search2.default,{name:this.state.searchTerm,userInput:this.updateInput.bind(this),search:function search(){return _this4.searchImages();},result:this.state.result}),_react2.default.createElement('div',{id:'container'},_react2.default.createElement('div',{className:'destination'},_react2.default.createElement(_Destination2.default,{destinations:this.state.destinations,getAllDestinations:this.getAllDestinations.bind(this)})),_react2.default.createElement('div',{className:'image'},_react2.default.createElement(_Image2.default,{source:this.state.image})),_react2.default.createElement('div',{className:'itinerary'},_react2.default.createElement(_Itinerary2.default// result={this.state.result}
+	,{userInput:this.updateInput.bind(this)// userItinerary={this.updateInput.bind(this)}
+	,addToDb:this.addToDb.bind(this)// name={this.state.result}
+	}))));}}]);return App;}(_react.Component);// itineraryText={this.state.itineraryText}
 	// getItineraryData={this.getItineraryData.bind(this)}
 	exports.default=App;
 
@@ -7548,8 +7521,7 @@
   \************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);__webpack_require__(/*! ./Itinerary.css */ 185);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Itinerary=function Itinerary(props){return _react2.default.createElement('div',{className:'itinerary'},_react2.default.createElement('h3',null,' Your Itinerary '),_react2.default.createElement('textarea',{id:'user-itinerary',type:'text',maxLength:'20000',placeholder:'You may type out or copy and paste your itinerary. Be as specific as you can with your flight schedule, if you need a hotel, pick up / drop off time and date, places you want to visit, or if you just want to be driven around. (No more than 20,000 characters)',value:props.name// onChange={props.userInput}
-	}),_react2.default.createElement('button',{onClick:props.addToDb},'SUBMIT FOR PRICE QUOTE'));};exports.default=Itinerary;
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);__webpack_require__(/*! ./Itinerary.css */ 185);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Itinerary=function Itinerary(props){return _react2.default.createElement('div',{className:'itinerary'},_react2.default.createElement('h3',null,' Your Itinerary '),_react2.default.createElement('textarea',{id:'user-itinerary',type:'text',maxLength:'20000',placeholder:'You may type out or copy and paste your itinerary. Be as specific as you can with your flight schedule, if you need a hotel, pick up / drop off time and date, places you want to visit, or if you just want to be driven around. (No more than 20,000 characters)',value:props.input,onChange:props.userInput}),_react2.default.createElement('button',{onClick:props.addToDb},'SUBMIT FOR PRICE QUOTE'));};exports.default=Itinerary;
 
 /***/ },
 /* 185 */
