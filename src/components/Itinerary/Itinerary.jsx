@@ -9,13 +9,12 @@ class Itinerary extends Component {
         <textarea
         id="user-itinerary"
         type="text"
-        maxlength="20000"
-        placeholder="Type out your itinerary. You may copy and paste."
+        maxLength="20000"
+        placeholder="You may type out or copy and paste your itinerary. Be as specific as you can with your flight schedule, if you need a hotel, pick up / drop off time and date and the places you want to visit. (No more than 20,000 characters)"
         value={this.props.name}
         onChange={this.props.userInput}
         />
-        <button onClick={this.props.search}>SUBMIT FOR PRICE QUOTE</button>
-
+        <button onClick={this.props.addToDb}>SUBMIT FOR PRICE QUOTE</button>
     </div>
     )
   }

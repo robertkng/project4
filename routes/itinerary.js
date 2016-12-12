@@ -1,24 +1,17 @@
-// const express = require('express');
-// const router = express.Router();
-// const { addMovie, deleteMovie, getAllMovies } = require('../models/moviesmodel');
-// const { searchMovies } = require('../services/services');
+const express = require('express');
+const router = express.Router();
+const db = require('../models/itinerary');
 
-// router.get('/movies', getAllMovies, (req, res) => {
-//   res.json(res.movies || []);
-// })
-
-// router.post('/movies', addMovie, (req, res) => {
-//   res.json(res.movies || []);
-//   // res.json({message: 'movie was added'});
-// })
+router.post('/itinerary', db.addItinerary, (req, res) => {
+  res.json(res.itinerary || []);
+})
 
 // router.delete('/movies/:id', deleteMovie, (req, res) => {
 //   res.json(res.movies || []);
 // })
 
-// router.get('/search', searchMovies, (req, res) => {
-//   console.log(res.movies);
-//   res.json(res.movies || []);
+// router.get('/search', searchImages, (req, res) => {
+//   res.json(res.images || []);
 // })
 
-// module.exports = router;
+module.exports = router;

@@ -23,12 +23,8 @@ CREATE TABLE destinations (
 
 CREATE TABLE itinerary (
   id SERIAL PRIMARY KEY,
-  itinerary VARCHAR(20000) NOT NULL,
+  itinerary VARCHAR(20000) NOT NULL
 );
-
-CREATE INDEX on itinerary (completed) ;
-CREATE INDEX on itinerary (date_created) ;
-CREATE INDEX on itinerary (date_deleted) ;
 
 CREATE TABLE operators (
   operator_id SERIAL,

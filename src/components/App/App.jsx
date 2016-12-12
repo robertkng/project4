@@ -58,18 +58,51 @@ export default class App extends Component {
       }
     };
 
-    const SHUTTERSTOCK_API_ENDPOINT = `https://api.shutterstock.com/v2/images/search?per_page=1&query=${this.state.searchTerm}`;
+    const SHUTTERSTOCK_API_ENDPOINT = `https://api.shutterstock.com/v2/videos/search?per_page=1&query=${this.state.searchTerm}`;
 
     fetch(SHUTTERSTOCK_API_ENDPOINT, authParameters)
     .then(r => r.json())
     .then(result => {
       // console.log(typeof result);
+      console.log(result);
       // console.log(result.data[0].assets.preview.url);
       // console.log(result.data[0].assets);
       this.setState({
-        image: result.data[0].assets.preview.url,
+        // image: result.data[0].assets.preview.url,
+        image: result.data[0].assets.preview_mp4.url,
       });
     });
+  }
+
+  addToDb(e) {
+    return fetch(`/itinerary`, {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify(this.state.result)
+    })
+    .catch()
+  }
+
+    getVisionData(url) {
+    fetch('/vision', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8'
+      },
+      body: JSON.stringify({ 'url': url }),
+    })
+    .then(r => r.json())
+    .then((data) => {
+      console.log(data)
+      this.setState({
+        counter: 2,
+        visionText: data.description.captions[0].text,
+        CrosshairHover: ''
+      })
+    })
+    .catch(err => console.log(err))
   }
 
   render() {
@@ -102,6 +135,7 @@ export default class App extends Component {
         <div className="itinerary">
           <Itinerary
             userInput={this.updateInput.bind(this)}
+            addToDb={this.addToDb.bind(this)}
           />
         </div>
         </div>

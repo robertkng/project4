@@ -31,7 +31,7 @@ h3 {
 .results-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  /*justify-content: left;*/
   /*flex-direction: row;*/
 }
 
