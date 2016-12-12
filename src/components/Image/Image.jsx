@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
 
-// render an image from the destination that is searched
+// render a video from what is searched
 export default class Images extends Component {
 
   render() {
     return (
-      <div id="image">
+      <div className="image">
       <h3>Results: {this.props.name}</h3>
         { this.props.source ?
           <video autoPlay>
