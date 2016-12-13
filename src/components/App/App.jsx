@@ -121,6 +121,7 @@ export default class App extends Component {
         <div className="image">
           <Image
             source={this.state.image}
+            name={this.state.searchTerm}
           />
         </div>
 
