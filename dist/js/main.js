@@ -1217,7 +1217,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 */'use strict';var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};var _prodInvariant=__webpack_require__(/*! ./reactProdInvariant */ 6);var ReactPropTypeLocationNames=__webpack_require__(/*! ./ReactPropTypeLocationNames */ 22);var ReactPropTypesSecret=__webpack_require__(/*! ./ReactPropTypesSecret */ 28);var invariant=__webpack_require__(/*! fbjs/lib/invariant */ 7);var warning=__webpack_require__(/*! fbjs/lib/warning */ 10);var ReactComponentTreeHook;if(typeof process!=='undefined'&&({"DB_HOST":"localhost","DB_USER":"robertng","DB_PASS":"123","DB_NAME":"quotinerary","DB_PORT":"5432","NODE_ENV":"development","CLIENT_ID":"9debd6d8d3c9644df10d","CLIENT_SECRET":"e9bb5e577bdcc6b30c1bad26a095c627ebd2688d"})&&("development")==='test'){// Temporary hack.
+	 */'use strict';var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};var _prodInvariant=__webpack_require__(/*! ./reactProdInvariant */ 6);var ReactPropTypeLocationNames=__webpack_require__(/*! ./ReactPropTypeLocationNames */ 22);var ReactPropTypesSecret=__webpack_require__(/*! ./ReactPropTypesSecret */ 28);var invariant=__webpack_require__(/*! fbjs/lib/invariant */ 7);var warning=__webpack_require__(/*! fbjs/lib/warning */ 10);var ReactComponentTreeHook;if(typeof process!=='undefined'&&({"DB_HOST":"localhost","DB_USER":"robertng","DB_PASS":"123","DB_NAME":"quotinerary","DB_PORT":"5432","NODE_ENV":"development","CLIENT_ID":"27964ff145c190b58dff","CLIENT_SECRET":"a7e2ad88cb073046310c63213386fdcbcc2ed9c8"})&&("development")==='test'){// Temporary hack.
 	// Inline requires don't work well with Jest:
 	// https://github.com/facebook/react/issues/7240
 	// Remove the inline requires when we don't need them anymore:
@@ -5091,7 +5091,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 */'use strict';var ReactReconciler=__webpack_require__(/*! ./ReactReconciler */ 59);var instantiateReactComponent=__webpack_require__(/*! ./instantiateReactComponent */ 118);var KeyEscapeUtils=__webpack_require__(/*! ./KeyEscapeUtils */ 128);var shouldUpdateReactComponent=__webpack_require__(/*! ./shouldUpdateReactComponent */ 124);var traverseAllChildren=__webpack_require__(/*! ./traverseAllChildren */ 129);var warning=__webpack_require__(/*! fbjs/lib/warning */ 10);var ReactComponentTreeHook;if(typeof process!=='undefined'&&({"DB_HOST":"localhost","DB_USER":"robertng","DB_PASS":"123","DB_NAME":"quotinerary","DB_PORT":"5432","NODE_ENV":"development","CLIENT_ID":"9debd6d8d3c9644df10d","CLIENT_SECRET":"e9bb5e577bdcc6b30c1bad26a095c627ebd2688d"})&&("development")==='test'){// Temporary hack.
+	 */'use strict';var ReactReconciler=__webpack_require__(/*! ./ReactReconciler */ 59);var instantiateReactComponent=__webpack_require__(/*! ./instantiateReactComponent */ 118);var KeyEscapeUtils=__webpack_require__(/*! ./KeyEscapeUtils */ 128);var shouldUpdateReactComponent=__webpack_require__(/*! ./shouldUpdateReactComponent */ 124);var traverseAllChildren=__webpack_require__(/*! ./traverseAllChildren */ 129);var warning=__webpack_require__(/*! fbjs/lib/warning */ 10);var ReactComponentTreeHook;if(typeof process!=='undefined'&&({"DB_HOST":"localhost","DB_USER":"robertng","DB_PASS":"123","DB_NAME":"quotinerary","DB_PORT":"5432","NODE_ENV":"development","CLIENT_ID":"27964ff145c190b58dff","CLIENT_SECRET":"a7e2ad88cb073046310c63213386fdcbcc2ed9c8"})&&("development")==='test'){// Temporary hack.
 	// Inline requires don't work well with Jest:
 	// https://github.com/facebook/react/issues/7240
 	// Remove the inline requires when we don't need them anymore:
@@ -5426,7 +5426,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 */'use strict';var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};var _prodInvariant=__webpack_require__(/*! ./reactProdInvariant */ 35);var ReactPropTypeLocationNames=__webpack_require__(/*! ./ReactPropTypeLocationNames */ 122);var ReactPropTypesSecret=__webpack_require__(/*! ./ReactPropTypesSecret */ 110);var invariant=__webpack_require__(/*! fbjs/lib/invariant */ 7);var warning=__webpack_require__(/*! fbjs/lib/warning */ 10);var ReactComponentTreeHook;if(typeof process!=='undefined'&&({"DB_HOST":"localhost","DB_USER":"robertng","DB_PASS":"123","DB_NAME":"quotinerary","DB_PORT":"5432","NODE_ENV":"development","CLIENT_ID":"9debd6d8d3c9644df10d","CLIENT_SECRET":"e9bb5e577bdcc6b30c1bad26a095c627ebd2688d"})&&("development")==='test'){// Temporary hack.
+	 */'use strict';var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};var _prodInvariant=__webpack_require__(/*! ./reactProdInvariant */ 35);var ReactPropTypeLocationNames=__webpack_require__(/*! ./ReactPropTypeLocationNames */ 122);var ReactPropTypesSecret=__webpack_require__(/*! ./ReactPropTypesSecret */ 110);var invariant=__webpack_require__(/*! fbjs/lib/invariant */ 7);var warning=__webpack_require__(/*! fbjs/lib/warning */ 10);var ReactComponentTreeHook;if(typeof process!=='undefined'&&({"DB_HOST":"localhost","DB_USER":"robertng","DB_PASS":"123","DB_NAME":"quotinerary","DB_PORT":"5432","NODE_ENV":"development","CLIENT_ID":"27964ff145c190b58dff","CLIENT_SECRET":"a7e2ad88cb073046310c63213386fdcbcc2ed9c8"})&&("development")==='test'){// Temporary hack.
 	// Inline requires don't work well with Jest:
 	// https://github.com/facebook/react/issues/7240
 	// Remove the inline requires when we don't need them anymore:
@@ -5758,7 +5758,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * 
-	 */'use strict';var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};var KeyEscapeUtils=__webpack_require__(/*! ./KeyEscapeUtils */ 128);var traverseAllChildren=__webpack_require__(/*! ./traverseAllChildren */ 129);var warning=__webpack_require__(/*! fbjs/lib/warning */ 10);var ReactComponentTreeHook;if(typeof process!=='undefined'&&({"DB_HOST":"localhost","DB_USER":"robertng","DB_PASS":"123","DB_NAME":"quotinerary","DB_PORT":"5432","NODE_ENV":"development","CLIENT_ID":"9debd6d8d3c9644df10d","CLIENT_SECRET":"e9bb5e577bdcc6b30c1bad26a095c627ebd2688d"})&&("development")==='test'){// Temporary hack.
+	 */'use strict';var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};var KeyEscapeUtils=__webpack_require__(/*! ./KeyEscapeUtils */ 128);var traverseAllChildren=__webpack_require__(/*! ./traverseAllChildren */ 129);var warning=__webpack_require__(/*! fbjs/lib/warning */ 10);var ReactComponentTreeHook;if(typeof process!=='undefined'&&({"DB_HOST":"localhost","DB_USER":"robertng","DB_PASS":"123","DB_NAME":"quotinerary","DB_PORT":"5432","NODE_ENV":"development","CLIENT_ID":"27964ff145c190b58dff","CLIENT_SECRET":"a7e2ad88cb073046310c63213386fdcbcc2ed9c8"})&&("development")==='test'){// Temporary hack.
 	// Inline requires don't work well with Jest:
 	// https://github.com/facebook/react/issues/7240
 	// Remove the inline requires when we don't need them anymore:
@@ -7440,21 +7440,34 @@
   \************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);var _Search=__webpack_require__(/*! ../Search/Search.jsx */ 179);var _Search2=_interopRequireDefault(_Search);var _Image=__webpack_require__(/*! ../Image/Image.jsx */ 181);var _Image2=_interopRequireDefault(_Image);var _Destination=__webpack_require__(/*! ../Destination/Destination.jsx */ 182);var _Destination2=_interopRequireDefault(_Destination);var _Itinerary=__webpack_require__(/*! ../Itinerary/Itinerary.jsx */ 184);var _Itinerary2=_interopRequireDefault(_Itinerary);__webpack_require__(/*! ./App.css */ 186);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}// import Socket from './Socket/Socket.jsx';
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);var _Search=__webpack_require__(/*! ../Search/Search.jsx */ 179);var _Search2=_interopRequireDefault(_Search);var _Image=__webpack_require__(/*! ../Image/Image.jsx */ 181);var _Image2=_interopRequireDefault(_Image);var _Destination=__webpack_require__(/*! ../Destination/Destination.jsx */ 182);var _Destination2=_interopRequireDefault(_Destination);var _Itinerary=__webpack_require__(/*! ../Itinerary/Itinerary.jsx */ 184);var _Itinerary2=_interopRequireDefault(_Itinerary);var _Socket=__webpack_require__(/*! ../Socket/Socket.jsx */ 188);var _Socket2=_interopRequireDefault(_Socket);__webpack_require__(/*! ./App.css */ 186);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}// import Socket from './Socket/Socket.jsx';
 	var App=function(_Component){_inherits(App,_Component);function App(){_classCallCheck(this,App);var _this=_possibleConstructorReturn(this,(App.__proto__||Object.getPrototypeOf(App)).call(this));_this.state={searchTerm:'',destinations:[],result:{}};return _this;}_createClass(App,[{key:'getAllDestinations',value:function getAllDestinations(){var _this2=this;console.log('app.jsx');// fetch must be made to middleware route. Client will never see this
 	fetch('/api/destinations').then(function(r){return r.json();}).then(function(results){_this2.setState({destinations:results.data});// console.log(this.state);
-	}).catch(function(err){return console.log(err);});}},{key:'updateInput',value:function updateInput(e){this.setState({result:e.target.value});console.log(this.state.searchTerm);}},{key:'searchImages',value:function searchImages(searchTerm){var _this3=this;// Set variable for API credentials
-	var CLIENT_ID=("9debd6d8d3c9644df10d");var CLIENT_SECRET=("e9bb5e577bdcc6b30c1bad26a095c627ebd2688d");// In the context of a HTTP transaction, basic access authentication is a method
+	}).catch(function(err){return console.log(err);});}},{key:'updateInput',value:function updateInput(e){this.setState({// result: e.target.value,
+	searchTerm:e.target.value});console.log(this.state.searchTerm);}},{key:'searchImages',value:function searchImages(searchTerm){var _this3=this;// Set variable for API credentials
+	var CLIENT_ID=("27964ff145c190b58dff");var CLIENT_SECRET=("a7e2ad88cb073046310c63213386fdcbcc2ed9c8");// In the context of a HTTP transaction, basic access authentication is a method
 	// for a HTTP user agent to provide a user name and password when making a request.
 	// window.btoa encodes API credentials just like .env.
 	// source: https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/btoa
 	var authorization=function authorization(){return'Basic '+window.btoa(CLIENT_ID+':'+CLIENT_SECRET);};// console.log(CLIENT_ID, CLIENT_SECRET, authorization());
 	// Shutterstock API requires headers authorization to fetch data from the API
-	var authParameters={headers:{Authorization:authorization()}};var SHUTTERSTOCK_API_ENDPOINT='https://api.shutterstock.com/v2/videos/search?per_page=1&query='+this.state.searchTerm;fetch(SHUTTERSTOCK_API_ENDPOINT,authParameters).then(function(r){return r.json();}).then(function(result){// console.log(typeof result);
-	console.log(result);// console.log(result.data[0].assets.preview.url);
-	// console.log(result.data[0].assets);
-	_this3.setState({// image: result.data[0].assets.preview.url,
-	image:result.data[0].assets.preview_mp4.url});});}},{key:'updateInput',value:function updateInput(e){this.setState({result:e.target.value});console.log(this.state.result);}},{key:'addToDb',value:function addToDb(e){fetch('/itinerary/itinerary',{headers:{'Content-Type':'application/json'},method:'POST',body:JSON.stringify({itinerary:this.state.result})}).catch(function(err){return console.log(err);});}},{key:'render',value:function render(){var _this4=this;return _react2.default.createElement('div',{className:'App'},_react2.default.createElement('h2',null,'Quotinerary'),_react2.default.createElement(_Search2.default,{name:this.state.searchTerm,userInput:this.updateInput.bind(this),search:function search(){return _this4.searchImages();},result:this.state.result}),_react2.default.createElement('div',{id:'container'},_react2.default.createElement('div',{className:'destination'},_react2.default.createElement(_Destination2.default,{destinations:this.state.destinations,getAllDestinations:this.getAllDestinations.bind(this)})),_react2.default.createElement('div',{className:'image'},_react2.default.createElement(_Image2.default,{source:this.state.image})),_react2.default.createElement('div',{className:'itinerary'},_react2.default.createElement(_Itinerary2.default,{userInput:this.updateInput.bind(this),addToDb:this.addToDb.bind(this)}))));}}]);return App;}(_react.Component);exports.default=App;
+	var authParameters={headers:{Authorization:authorization()}};var SHUTTERSTOCK_API_ENDPOINT='https://api.shutterstock.com/v2/videos/search?per_page=1&query='+this.state.searchTerm;// const SHUTTERSTOCK_API_ENDPOINT = `https://api.shutterstock.com/v2/images/search?per_page=1&query=${this.state.searchTerm}`;
+	fetch(SHUTTERSTOCK_API_ENDPOINT,authParameters).then(function(r){return r.json();}).then(function(result){// console.log(typeof result);
+	console.log(result);// console.log(result.data[0].assets);
+	_this3.setState({image:result.data[0].assets.preview_mp4.url});});}},{key:'updateItinerary',value:function updateItinerary(e){this.setState({result:e.target.value});console.log(this.state.result);}},{key:'addToDb',value:function addToDb(e){fetch('/itinerary/itinerary',{headers:{'Content-Type':'application/json'},method:'POST',body:JSON.stringify({itinerary:this.state.result})}).catch(function(err){return console.log(err);});}},{key:'render',value:function render(){var _this4=this;return _react2.default.createElement('div',{className:'App'},_react2.default.createElement('h2',null,'Quotinerary'),_react2.default.createElement(_Search2.default,{name:this.state.searchTerm,userInput:this.updateInput.bind(this),search:function search(){return _this4.searchImages();},result:this.state.result}),_react2.default.createElement('div',{id:'container'},_react2.default.createElement('div',{className:'destination'},_react2.default.createElement(_Destination2.default,{destinations:this.state.destinations,getAllDestinations:this.getAllDestinations.bind(this)})),_react2.default.createElement('div',{className:'image'},_react2.default.createElement(_Image2.default,{source:this.state.image})),_react2.default.createElement('div',{className:'itinerary'},_react2.default.createElement(_Itinerary2.default,{userInput:this.updateItinerary.bind(this),addToDb:this.addToDb.bind(this)}))));}}]);return App;}(_react.Component);// <div className="socket-container">
+	//   <Socket />
+	// </div>
+	// <footer>
+	// <div
+	// id="open-chat"
+	//   onClick={() => {
+	//             document.querySelector('.message-popup').style.display='block';
+	//           }}
+	// >
+	// Chat
+	// </div>
+	// </footer>
+	exports.default=App;
 
 /***/ },
 /* 179 */
@@ -7463,7 +7476,7 @@
   \******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);__webpack_require__(/*! ./Search.css */ 180);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Search=function(_Component){_inherits(Search,_Component);function Search(){_classCallCheck(this,Search);return _possibleConstructorReturn(this,(Search.__proto__||Object.getPrototypeOf(Search)).apply(this,arguments));}_createClass(Search,[{key:'render',value:function render(){return _react2.default.createElement('div',{id:'search'},_react2.default.createElement('input',{type:'text',value:this.props.input,onChange:this.props.userInput}),_react2.default.createElement('button',{onClick:this.props.search},'SEARCH CITY OR COUNTRY'));}}]);return Search;}(_react.Component);exports.default=Search;
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);__webpack_require__(/*! ./Search.css */ 180);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Search=function(_Component){_inherits(Search,_Component);function Search(){_classCallCheck(this,Search);return _possibleConstructorReturn(this,(Search.__proto__||Object.getPrototypeOf(Search)).apply(this,arguments));}_createClass(Search,[{key:'render',value:function render(){return _react2.default.createElement('div',{id:'search'},_react2.default.createElement('input',{type:'text',name:this.props.name,value:this.props.input,onChange:this.props.userInput}),_react2.default.createElement('button',{onClick:this.props.search},'SEARCH CITY OR COUNTRY'));}}]);return Search;}(_react.Component);exports.default=Search;
 
 /***/ },
 /* 180 */
@@ -7538,6 +7551,68 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 188 */
+/*!******************************************!*\
+  !*** ./src/components/Socket/Socket.jsx ***!
+  \******************************************/
+/***/ function(module, exports) {
+
+	// import React, { Component } from 'react';
+	// import './Socket.css';
+	// export default class Socket extends Component {
+	//   componentWillMount() {
+	//     this.socketFn();
+	//   }
+	//   socketFn() {
+	//     // receive data from server through socket 'chatroom'
+	//     const socket = io();
+	//     socket.on('chatroom', msg => {
+	//       console.log('data on frontend', msg);
+	//       const ul = document.getElementById('messages');
+	//       const li = document.createElement('li');
+	//       li.innerHTML = msg.msg;
+	//       ul.appendChild(li);
+	//     });
+	//   }
+	//   handleSubmit(e) {
+	//     // console.log('submit event', e.target);
+	//     e.preventDefault();
+	//     const socket = io();
+	//     const i = document.getElementById('m');
+	//     // send data to server through socket 'server-chat'
+	//     socket.emit('server-chat', i.value);
+	//     i.value = '';
+	//   }
+	//   handleInputChange(e) {
+	//     // console.log(e.target.value)
+	//     this.setState({
+	//       msg: e.target.value,
+	//     });
+	//   }
+	//   render() {
+	//     return(
+	//       <div className='message-popup'>
+	//         <div
+	//         className="message-header"
+	//         onClick={()=>{document.querySelector('.message-popup').style.display = "none"}}
+	//         ><span>×</span>
+	//         </div>
+	//         <div className="screen">
+	//           <ul id="messages"></ul>
+	//         </div>
+	//         <div className='socket-form'>
+	//           <form onSubmit={event => this.handleSubmit(event)}>
+	//             <input id="m" onChange={event => this.handleInputChange(event)}/>
+	//             <button>Send</button>
+	//           </form>
+	//         </div>
+	//       </div>
+	//     )
+	//   }
+	// }
+	"use strict";
 
 /***/ }
 /******/ ]);

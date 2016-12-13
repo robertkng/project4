@@ -4,6 +4,7 @@ import Search from '../Search/Search.jsx';
 import Image from '../Image/Image.jsx';
 import Destination from '../Destination/Destination.jsx';
 import Itinerary from '../Itinerary/Itinerary.jsx';
+import Socket from '../Socket/Socket.jsx';
 import './App.css';
 
 export default class App extends Component {
@@ -33,7 +34,8 @@ export default class App extends Component {
 
   updateInput(e) {
     this.setState({
-      result: e.target.value
+      // result: e.target.value,
+      searchTerm: e.target.value
     })
     console.log(this.state.searchTerm);
   }
@@ -58,22 +60,22 @@ export default class App extends Component {
     };
 
     const SHUTTERSTOCK_API_ENDPOINT = `https://api.shutterstock.com/v2/videos/search?per_page=1&query=${this.state.searchTerm}`;
+    // const SHUTTERSTOCK_API_ENDPOINT = `https://api.shutterstock.com/v2/images/search?per_page=1&query=${this.state.searchTerm}`;
 
     fetch(SHUTTERSTOCK_API_ENDPOINT, authParameters)
     .then(r => r.json())
     .then(result => {
       // console.log(typeof result);
       console.log(result);
-      // console.log(result.data[0].assets.preview.url);
       // console.log(result.data[0].assets);
       this.setState({
-        // image: result.data[0].assets.preview.url,
         image: result.data[0].assets.preview_mp4.url,
+        // image: result.data[0].assets.preview.url,
       });
     });
   }
 
-  updateInput(e) {
+  updateItinerary(e) {
     this.setState({
       result: e.target.value
     })
@@ -122,13 +124,28 @@ export default class App extends Component {
 
         <div className="itinerary">
           <Itinerary
-            userInput={this.updateInput.bind(this)}
+            userInput={this.updateItinerary.bind(this)}
             addToDb={this.addToDb.bind(this)}
           />
         </div>
         </div>
 
+
       </div>
     );
   }
 }
+        // <div className="socket-container">
+        //   <Socket />
+        // </div>
+
+        // <footer>
+        // <div
+            // id="open-chat"
+          //   onClick={() => {
+          //             document.querySelector('.message-popup').style.display='block';
+          //           }}
+          // >
+          // Chat
+        // </div>
+        // </footer>

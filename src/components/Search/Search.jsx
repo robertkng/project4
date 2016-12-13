@@ -7,6 +7,7 @@ class Search extends Component {
     <div id="search">
         <input
         type="text"
+        name={this.props.name}
         value={this.props.input}
         onChange={this.props.userInput}
         />

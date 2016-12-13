@@ -14,19 +14,22 @@ const itinerary     = require('./routes/itinerary');
 const app           = express();
 const PORT          = process.argv[2] || process.env.port || 3000;
 
-// Require socket.io
-const http       = require('http').Server(app);
-const io         = require('socket.io')(http);
+// Source: http://socket.io/docs/server-api/
+// Set const to bind Socket.io to express server
+const http          = require('http').Server(app);
+// Require socket.io node module and bind to express server
+const io            = require('socket.io')(http);
 
+// Emit event to socket on 'connection'
 io.on('connection', socket => {
-  console.log('a user connected');
-// receive msg from client through socket 'server-chat'
+  console.log('new user is signed on');
+// 'server-chat' socket message received from client
   socket.on('server-chat', msg => {
     console.log('chat: ' + msg);
-// broadcast msg received to all who are listening to socket 'chatroom'
+// Anyone listening to the 'chatroom' socket can view the message
     socket.broadcast.emit('chatroom', {msg : msg});
   });
-  socket.on('disconnect', () => console.log('user disconnected'));
+  socket.on('disconnect', () => console.log('user no longer available'));
 });
 
 // To log issues to the terminal
