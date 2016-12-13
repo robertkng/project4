@@ -8,7 +8,6 @@ class Destination extends Component {
   }
 
   showDestinations(destinations) {
-    // const regex = /(<br \/>)/g;
     return destinations.map((render, index) => {
       return (
         <ul key={index} className="results-container">

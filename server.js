@@ -14,6 +14,21 @@ const itinerary     = require('./routes/itinerary');
 const app           = express();
 const PORT          = process.argv[2] || process.env.port || 3000;
 
+// Require socket.io
+const http       = require('http').Server(app);
+const io         = require('socket.io')(http);
+
+io.on('connection', socket => {
+  console.log('a user connected');
+// receive msg from client through socket 'server-chat'
+  socket.on('server-chat', msg => {
+    console.log('chat: ' + msg);
+// broadcast msg received to all who are listening to socket 'chatroom'
+    socket.broadcast.emit('chatroom', {msg : msg});
+  });
+  socket.on('disconnect', () => console.log('user disconnected'));
+});
+
 // To log issues to the terminal
 app.use(logger('dev'));
 

@@ -7,11 +7,10 @@ class Search extends Component {
     <div id="search">
         <input
         type="text"
-        value={this.props.name}
+        value={this.props.input}
         onChange={this.props.userInput}
         />
         <button onClick={this.props.search}>SEARCH CITY OR COUNTRY</button>
-
 
     </div>
     )

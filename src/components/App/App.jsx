@@ -13,8 +13,6 @@ export default class App extends Component {
     this.state = {
       searchTerm: '',
       destinations: [],
-      // itineraryText: '',
-      // totalResults: 0
       result: {}
     };
   }
@@ -36,7 +34,6 @@ export default class App extends Component {
   updateInput(e) {
     this.setState({
       result: e.target.value
-      // result: e.target.value
     })
     console.log(this.state.searchTerm);
   }
@@ -77,9 +74,7 @@ export default class App extends Component {
   }
 
   updateInput(e) {
-    // let movieTitle = e.target.value;
     this.setState({
-      // searchTerm: movieTitle
       result: e.target.value
     })
     console.log(this.state.result);
@@ -127,11 +122,8 @@ export default class App extends Component {
 
         <div className="itinerary">
           <Itinerary
-            // result={this.state.result}
             userInput={this.updateInput.bind(this)}
-            // userItinerary={this.updateInput.bind(this)}
             addToDb={this.addToDb.bind(this)}
-            // name={this.state.result}
           />
         </div>
         </div>
@@ -140,5 +132,3 @@ export default class App extends Component {
     );
   }
 }
-            // itineraryText={this.state.itineraryText}
-            // getItineraryData={this.getItineraryData.bind(this)}
