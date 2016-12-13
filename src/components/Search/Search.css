@@ -1,5 +1,6 @@
 #search {
   text-align: center;
+
 }
 
 input {
@@ -10,4 +11,9 @@ input {
 
 button {
   height: 30px;
+  font-size: 20px;
+  background-color: rgba(37, 47, 61, .9);
+  color: #e6fff7;
+  padding: 7px;
+  font-weight: bold;
 }
