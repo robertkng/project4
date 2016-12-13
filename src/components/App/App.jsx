@@ -34,7 +34,6 @@ export default class App extends Component {
 
   updateInput(e) {
     this.setState({
-      // result: e.target.value,
       searchTerm: e.target.value
     })
     console.log(this.state.searchTerm);
@@ -98,8 +97,9 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <h2>Quotinerary</h2>
 
+        <div id="nav">
+        <h2>Quotinerary</h2>
 
         <Search
           name={this.state.searchTerm}
@@ -107,8 +107,10 @@ export default class App extends Component {
           search={()=> this.searchImages()}
           result={this.state.result}
         />
+        </div>
 
         <div id="container">
+
         <div className="destination">
           <Destination
             destinations={this.state.destinations}
@@ -128,6 +130,7 @@ export default class App extends Component {
             addToDb={this.addToDb.bind(this)}
           />
         </div>
+
         </div>
 
         <div className="socket-container">
@@ -141,7 +144,7 @@ export default class App extends Component {
                       document.querySelector('.message-popup').style.display='block';
                     }}
           >
-          Chat
+          MESSAGES
         </div>
         </footer>
 

@@ -8,8 +8,6 @@ const logger        = require('morgan');
 const path          = require('path');
 const cookieParser  = require('cookie-parser');
 const bodyParser    = require('body-parser');
-
-
 const app           = express();
 const PORT          = process.argv[2] || process.env.port || 3000;
 
@@ -21,19 +19,18 @@ const io            = require('socket.io')(http);
 
 // Emit event to socket on 'connection'
 io.on('connection', socket => {
-  console.log('new user is available');
+  // console.log('new user is available');
 // 'server-chat' socket message received from client
   socket.on('server-chat', msg => {
-    console.log('chat: ' + msg);
+    // console.log('chat: ' + msg);
 // Anyone listening to the 'chatroom' socket can view the message
 // sends the message to all the other clients except the newly created connection
     socket.broadcast.emit('chatroom', {msg : msg});
-    // sends to all the clients
-    // io.socket.emit('chatroom', {msg : msg});
   });
   socket.on('disconnect', () => console.log('user no longer available'));
 });
 
+// Server listens to http server, and it will automatically serve the client
 http.listen(PORT, () => console.log('listening on', PORT));
 
 // To log issues to the terminal

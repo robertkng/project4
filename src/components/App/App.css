@@ -1,10 +1,28 @@
+html {
+  background-color: #fafafa;
+}
+
+#nav {
+  background-color: rgba(97, 180, 206, .9);
+  color: white;
+  top: 0%;
+  left: -1px;
+  height: 100px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 99;
+}
+
 #container {
   display: flex;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 56px;
   text-align: center;
+  color: #e6fff7;
+  font-style: italic;
 }
 
 h3, .Destinations {

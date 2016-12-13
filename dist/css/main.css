@@ -1,16 +1,26 @@
 #search {
   text-align: center;
 }
+
+input {
+  height: 30px;
+  width: 260px;
+  font-size: 28px;
+}
+
+button {
+  height: 30px;
+}
 li {
   font-size: 28px;
 }
 
 .results-container {
-    width: 250px;
-    height: 160px;
+    width: 280px;
+    height: 200px;
     padding: 10px;
     border: 7px solid red;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 20px 10px 5px 0px rgba(0,0,0,0.65);
 }
 /*#itinerary {
   text-align: right;
@@ -112,13 +122,31 @@ li {
 #messages li:nth-child(odd) {
   background: #eee;
 }
+html {
+  background-color: #fafafa;
+}
+
+#nav {
+  background-color: rgba(97, 180, 206, .9);
+  color: white;
+  top: 0%;
+  left: -1px;
+  height: 100px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 99;
+}
+
 #container {
   display: flex;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 56px;
   text-align: center;
+  color: #e6fff7;
+  font-style: italic;
 }
 
 h3, .Destinations {

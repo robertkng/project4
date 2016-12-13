@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './Socket.css';
 
+// Credit to Sam for helping me out with socket.io
 export default class Socket extends Component {
   componentWillMount() {
-    this.socketFn();
+    this.socketFunction();
   }
 
-  socketFn() {
+  socketFunction() {
     // receive data from server through socket 'chatroom'
     const socket = io();
     socket.on('chatroom', msg => {
@@ -19,7 +20,6 @@ export default class Socket extends Component {
   }
 
   handleSubmit(e) {
-    // console.log('submit event', e.target);
     e.preventDefault();
     const socket = io();
     const i = document.getElementById('m');
@@ -29,7 +29,6 @@ export default class Socket extends Component {
   }
 
   handleInputChange(e) {
-    // console.log(e.target.value)
     this.setState({
       msg: e.target.value,
     });
