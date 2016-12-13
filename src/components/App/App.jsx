@@ -130,22 +130,22 @@ export default class App extends Component {
         </div>
         </div>
 
+        <div className="socket-container">
+          <Socket />
+        </div>
+
+        <footer>
+        <div
+            id="open-chat"
+            onClick={() => {
+                      document.querySelector('.message-popup').style.display='block';
+                    }}
+          >
+          Chat
+        </div>
+        </footer>
 
       </div>
     );
   }
 }
-        // <div className="socket-container">
-        //   <Socket />
-        // </div>
-
-        // <footer>
-        // <div
-            // id="open-chat"
-          //   onClick={() => {
-          //             document.querySelector('.message-popup').style.display='block';
-          //           }}
-          // >
-          // Chat
-        // </div>
-        // </footer>

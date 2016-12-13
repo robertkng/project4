@@ -7454,20 +7454,7 @@
 	var authParameters={headers:{Authorization:authorization()}};var SHUTTERSTOCK_API_ENDPOINT='https://api.shutterstock.com/v2/videos/search?per_page=1&query='+this.state.searchTerm;// const SHUTTERSTOCK_API_ENDPOINT = `https://api.shutterstock.com/v2/images/search?per_page=1&query=${this.state.searchTerm}`;
 	fetch(SHUTTERSTOCK_API_ENDPOINT,authParameters).then(function(r){return r.json();}).then(function(result){// console.log(typeof result);
 	console.log(result);// console.log(result.data[0].assets);
-	_this3.setState({image:result.data[0].assets.preview_mp4.url});});}},{key:'updateItinerary',value:function updateItinerary(e){this.setState({result:e.target.value});console.log(this.state.result);}},{key:'addToDb',value:function addToDb(e){fetch('/itinerary/itinerary',{headers:{'Content-Type':'application/json'},method:'POST',body:JSON.stringify({itinerary:this.state.result})}).catch(function(err){return console.log(err);});}},{key:'render',value:function render(){var _this4=this;return _react2.default.createElement('div',{className:'App'},_react2.default.createElement('h2',null,'Quotinerary'),_react2.default.createElement(_Search2.default,{name:this.state.searchTerm,userInput:this.updateInput.bind(this),search:function search(){return _this4.searchImages();},result:this.state.result}),_react2.default.createElement('div',{id:'container'},_react2.default.createElement('div',{className:'destination'},_react2.default.createElement(_Destination2.default,{destinations:this.state.destinations,getAllDestinations:this.getAllDestinations.bind(this)})),_react2.default.createElement('div',{className:'image'},_react2.default.createElement(_Image2.default,{source:this.state.image})),_react2.default.createElement('div',{className:'itinerary'},_react2.default.createElement(_Itinerary2.default,{userInput:this.updateItinerary.bind(this),addToDb:this.addToDb.bind(this)}))));}}]);return App;}(_react.Component);// <div className="socket-container">
-	//   <Socket />
-	// </div>
-	// <footer>
-	// <div
-	// id="open-chat"
-	//   onClick={() => {
-	//             document.querySelector('.message-popup').style.display='block';
-	//           }}
-	// >
-	// Chat
-	// </div>
-	// </footer>
-	exports.default=App;
+	_this3.setState({image:result.data[0].assets.preview_mp4.url});});}},{key:'updateItinerary',value:function updateItinerary(e){this.setState({result:e.target.value});console.log(this.state.result);}},{key:'addToDb',value:function addToDb(e){fetch('/itinerary/itinerary',{headers:{'Content-Type':'application/json'},method:'POST',body:JSON.stringify({itinerary:this.state.result})}).catch(function(err){return console.log(err);});}},{key:'render',value:function render(){var _this4=this;return _react2.default.createElement('div',{className:'App'},_react2.default.createElement('h2',null,'Quotinerary'),_react2.default.createElement(_Search2.default,{name:this.state.searchTerm,userInput:this.updateInput.bind(this),search:function search(){return _this4.searchImages();},result:this.state.result}),_react2.default.createElement('div',{id:'container'},_react2.default.createElement('div',{className:'destination'},_react2.default.createElement(_Destination2.default,{destinations:this.state.destinations,getAllDestinations:this.getAllDestinations.bind(this)})),_react2.default.createElement('div',{className:'image'},_react2.default.createElement(_Image2.default,{source:this.state.image})),_react2.default.createElement('div',{className:'itinerary'},_react2.default.createElement(_Itinerary2.default,{userInput:this.updateItinerary.bind(this),addToDb:this.addToDb.bind(this)}))),_react2.default.createElement('div',{className:'socket-container'},_react2.default.createElement(_Socket2.default,null)),_react2.default.createElement('footer',null,_react2.default.createElement('div',{id:'open-chat',onClick:function onClick(){document.querySelector('.message-popup').style.display='block';}},'Chat')));}}]);return App;}(_react.Component);exports.default=App;
 
 /***/ },
 /* 179 */
@@ -7557,62 +7544,22 @@
 /*!******************************************!*\
   !*** ./src/components/Socket/Socket.jsx ***!
   \******************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);__webpack_require__(/*! ./Socket.css */ 189);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Socket=function(_Component){_inherits(Socket,_Component);function Socket(){_classCallCheck(this,Socket);return _possibleConstructorReturn(this,(Socket.__proto__||Object.getPrototypeOf(Socket)).apply(this,arguments));}_createClass(Socket,[{key:'componentWillMount',value:function componentWillMount(){this.socketFn();}},{key:'socketFn',value:function socketFn(){// receive data from server through socket 'chatroom'
+	var socket=io();socket.on('chatroom',function(msg){console.log('data on frontend',msg);var ul=document.getElementById('messages');var li=document.createElement('li');li.innerHTML=msg.msg;ul.appendChild(li);});}},{key:'handleSubmit',value:function handleSubmit(e){// console.log('submit event', e.target);
+	e.preventDefault();var socket=io();var i=document.getElementById('m');// send data to server through socket 'server-chat'
+	socket.emit('server-chat',i.value);i.value='';}},{key:'handleInputChange',value:function handleInputChange(e){// console.log(e.target.value)
+	this.setState({msg:e.target.value});}},{key:'render',value:function render(){var _this2=this;return _react2.default.createElement('div',{className:'message-popup'},_react2.default.createElement('div',{className:'message-header',onClick:function onClick(){document.querySelector('.message-popup').style.display="none";}},_react2.default.createElement('span',null,'\xD7')),_react2.default.createElement('div',{className:'screen'},_react2.default.createElement('ul',{id:'messages'})),_react2.default.createElement('div',{className:'socket-form'},_react2.default.createElement('form',{onSubmit:function onSubmit(event){return _this2.handleSubmit(event);}},_react2.default.createElement('input',{id:'m',onChange:function onChange(event){return _this2.handleInputChange(event);}}),_react2.default.createElement('button',null,'Send'))));}}]);return Socket;}(_react.Component);exports.default=Socket;
+
+/***/ },
+/* 189 */
+/*!******************************************!*\
+  !*** ./src/components/Socket/Socket.css ***!
+  \******************************************/
 /***/ function(module, exports) {
 
-	// import React, { Component } from 'react';
-	// import './Socket.css';
-	// export default class Socket extends Component {
-	//   componentWillMount() {
-	//     this.socketFn();
-	//   }
-	//   socketFn() {
-	//     // receive data from server through socket 'chatroom'
-	//     const socket = io();
-	//     socket.on('chatroom', msg => {
-	//       console.log('data on frontend', msg);
-	//       const ul = document.getElementById('messages');
-	//       const li = document.createElement('li');
-	//       li.innerHTML = msg.msg;
-	//       ul.appendChild(li);
-	//     });
-	//   }
-	//   handleSubmit(e) {
-	//     // console.log('submit event', e.target);
-	//     e.preventDefault();
-	//     const socket = io();
-	//     const i = document.getElementById('m');
-	//     // send data to server through socket 'server-chat'
-	//     socket.emit('server-chat', i.value);
-	//     i.value = '';
-	//   }
-	//   handleInputChange(e) {
-	//     // console.log(e.target.value)
-	//     this.setState({
-	//       msg: e.target.value,
-	//     });
-	//   }
-	//   render() {
-	//     return(
-	//       <div className='message-popup'>
-	//         <div
-	//         className="message-header"
-	//         onClick={()=>{document.querySelector('.message-popup').style.display = "none"}}
-	//         ><span>×</span>
-	//         </div>
-	//         <div className="screen">
-	//           <ul id="messages"></ul>
-	//         </div>
-	//         <div className='socket-form'>
-	//           <form onSubmit={event => this.handleSubmit(event)}>
-	//             <input id="m" onChange={event => this.handleInputChange(event)}/>
-	//             <button>Send</button>
-	//           </form>
-	//         </div>
-	//       </div>
-	//     )
-	//   }
-	// }
-	"use strict";
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);

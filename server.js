@@ -8,8 +8,7 @@ const logger        = require('morgan');
 const path          = require('path');
 const cookieParser  = require('cookie-parser');
 const bodyParser    = require('body-parser');
-const api           = require('./routes/destination');
-const itinerary     = require('./routes/itinerary');
+
 
 const app           = express();
 const PORT          = process.argv[2] || process.env.port || 3000;
@@ -22,15 +21,20 @@ const io            = require('socket.io')(http);
 
 // Emit event to socket on 'connection'
 io.on('connection', socket => {
-  console.log('new user is signed on');
+  console.log('new user is available');
 // 'server-chat' socket message received from client
   socket.on('server-chat', msg => {
     console.log('chat: ' + msg);
 // Anyone listening to the 'chatroom' socket can view the message
+// sends the message to all the other clients except the newly created connection
     socket.broadcast.emit('chatroom', {msg : msg});
+    // sends to all the clients
+    // io.socket.emit('chatroom', {msg : msg});
   });
   socket.on('disconnect', () => console.log('user no longer available'));
 });
+
+http.listen(PORT, () => console.log('listening on', PORT));
 
 // To log issues to the terminal
 app.use(logger('dev'));
@@ -44,8 +48,8 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 
 // all routes will pass through /api
-app.use('/api', api);
-app.use('/itinerary', itinerary);
+app.use('/api', require('./routes/destination'));
+app.use('/itinerary', require('./routes/itinerary'));
 
 // To log whether a server is running
-app.listen(PORT, () => console.log('server is listening on ', PORT));
+// app.listen(PORT, () => console.log('server is listening on ', PORT));
