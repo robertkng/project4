@@ -2,7 +2,7 @@
 // routes, and interaction between files
 
 'use strict'
-require('dotenv').config({ silent: true });
+// require('dotenv').config({ silent: true });
 const express       = require('express');
 const logger        = require('morgan');
 const path          = require('path');
