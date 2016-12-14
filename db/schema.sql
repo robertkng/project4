@@ -23,6 +23,7 @@ CREATE TABLE destinations (
 
 CREATE TABLE itinerary (
   id SERIAL PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
   itinerary VARCHAR(20000) NOT NULL
 );
 

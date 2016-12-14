@@ -30,7 +30,7 @@ io.on('connection', socket => {
   socket.on('disconnect', () => console.log('user no longer available'));
 });
 
-// Server listens to http server, and it will automatically serve the client
+// Communication is made through the http server
 http.listen(PORT, () => console.log('listening on', PORT));
 
 // To log issues to the terminal

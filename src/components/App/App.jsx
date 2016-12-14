@@ -14,8 +14,22 @@ export default class App extends Component {
     this.state = {
       searchTerm: '',
       destinations: [],
+      title: {},
       result: {}
     };
+  }
+
+  getAllItineraries() {
+    // fetch must be made to middleware route. Client will never see this
+    fetch(`/itinerary/itinerary`)
+    .then(r => r.json())
+    .then((data) => {
+      this.setState({
+        title: this.state.title
+      });
+      // console.log(this.state);
+    })
+    .catch(err => console.log(err));
   }
 
   getAllDestinations() {
@@ -74,6 +88,13 @@ export default class App extends Component {
     });
   }
 
+  updateTitle(e) {
+    this.setState({
+      title: e.target.value
+    })
+    console.log(this.state.title);
+  }
+
   updateItinerary(e) {
     this.setState({
       result: e.target.value
@@ -88,6 +109,7 @@ export default class App extends Component {
       },
       method: 'POST',
       body: JSON.stringify({
+        title: this.state.title,
         itinerary: this.state.result,
       })
     })
@@ -127,8 +149,10 @@ export default class App extends Component {
 
         <div className="itinerary">
           <Itinerary
+            userTitle={this.updateTitle.bind(this)}
             userInput={this.updateItinerary.bind(this)}
             addToDb={this.addToDb.bind(this)}
+            getAllItineraries={this.getAllItineraries.bind(this)}
           />
         </div>
 

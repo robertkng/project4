@@ -11,5 +11,11 @@
 }
 
 .itinerary {
-  left: 100%;
+  /*left: 100%;*/
+  display: flex;
+  flex-direction: column;
+}
+
+#itinerary-title {
+
 }

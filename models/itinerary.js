@@ -13,8 +13,8 @@ function getAllItineraries(req, res, next) {
 
 // Function call that adds the input data into the itinerary database
 function addItinerary(req, res, next) {
- db.none(`INSERT INTO itinerary (itinerary)
-          VALUES ($1);`, [req.body.itinerary])
+ db.none(`INSERT INTO itinerary (title, itinerary)
+          VALUES ($1, $2);`, [req.body.title, req.body.itinerary])
  .then(next())
  .catch(err => next(err));
 }
