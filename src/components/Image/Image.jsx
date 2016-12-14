@@ -7,7 +7,7 @@ export default class Images extends Component {
   render() {
     return (
       <div className="image">
-      <h3>Results: {this.props.name}</h3>
+      <h4>Results: {this.props.name}</h4>
        { this.props.source ?
           <video autoPlay loop>
             <source src={this.props.source} />

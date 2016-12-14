@@ -5,15 +5,15 @@ import './Itinerary.css';
 class Itinerary extends Component {
 
 
-//     renderAllItineraries() {
-//     return this.props.getAllItineraries.map((mov, i) =>
-//         <ItineraryList
-//         title={mov.title}
-//         key={i}
-//         id={mov.id}
-//         />
-//     )
-// }
+  renderAllItineraries() {
+    return this.props.title.map((mov, i) =>
+    <ItineraryList
+    title={mov.title}
+    key={i}
+    id={mov.id}
+    />
+    )
+}
 
   componentWillMount(){
     this.props.getAllItineraries();
@@ -44,6 +44,7 @@ render() {
 
 
      <h3> Saved Itineraries </h3>
+        {this.renderAllItineraries()}
     </div>
         )
     };
@@ -52,4 +53,3 @@ render() {
 export default Itinerary;
 
 
-        // {this.renderAllItineraries()}

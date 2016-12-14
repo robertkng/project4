@@ -14,19 +14,19 @@ export default class App extends Component {
     this.state = {
       searchTerm: '',
       destinations: [],
-      title: {},
+      title: [],
       result: {},
       user: undefined
     };
   }
 
   getAllItineraries() {
-    // fetch must be made to middleware route. Client will never see this
+    console.log(this.state.title)
     fetch(`/itinerary/itinerary`)
     .then(r => r.json())
     .then((data) => {
       this.setState({
-        title: this.state.title
+        title: data
       });
       // console.log(this.state);
     })
@@ -143,6 +143,7 @@ export default class App extends Component {
 
         <div className="itinerary">
           <Itinerary
+            title={this.state.title}
             userTitle={this.updateTitle.bind(this)}
             userInput={this.updateItinerary.bind(this)}
             addToDb={this.addToDb.bind(this)}
