@@ -31,6 +31,7 @@ render() {
         value={this.props.input}
         onChange={this.props.userTitle}
         />
+        <br />
         <textarea
         id="user-itinerary"
         type="text"
