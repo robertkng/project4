@@ -22,10 +22,10 @@ export default class Socket extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const socket = io();
-    const i = document.getElementById('m');
+    const clear = document.getElementById('m');
     // send data to server through socket 'server-chat'
-    socket.emit('server-chat', i.value);
-    i.value = '';
+    socket.emit('server-chat', clear.value);
+    clear.value = '';
   }
 
   handleInputChange(e) {
