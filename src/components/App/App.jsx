@@ -33,9 +33,22 @@ export default class App extends Component {
     .catch(err => console.log(err));
   }
 
+  deleteFromDb(id) {
+    // console.log('deleteFromDb');
+    fetch(`/itinerary/itinerary/${id}`, {
+      method: 'DELETE'
+    })
+    .then(() => {
+      const title = this.state.title.filter((mov) => {
+        return mov.id !==id;
+      });
+      this.setState({ title });
+    })
+    .catch(err => console.log(err));
+  }
+
   getAllDestinations() {
-    console.log('app.jsx');
-    // fetch must be made to middleware route. Client will never see this
+    // console.log('app.jsx');
     fetch(`/api/destinations`)
     .then(r => r.json())
     .then((results) => {
@@ -148,6 +161,7 @@ export default class App extends Component {
             userInput={this.updateItinerary.bind(this)}
             addToDb={this.addToDb.bind(this)}
             getAllItineraries={this.getAllItineraries.bind(this)}
+            deleteFromDb={this.deleteFromDb.bind(this)}
           />
         </div>
 

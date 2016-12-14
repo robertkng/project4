@@ -11,6 +11,7 @@ class Itinerary extends Component {
     title={mov.title}
     key={i}
     id={mov.id}
+    deleteFromDb={this.props.deleteFromDb}
     />
     )
 }
