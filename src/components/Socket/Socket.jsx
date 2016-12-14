@@ -12,17 +12,17 @@ export default class Socket extends Component {
     const socket = io();
     socket.on('chatroom', msg => {
       console.log('data on frontend', msg);
-      const ul = document.getElementById('messages');
+      const messages = document.getElementById('messages');
       const li = document.createElement('li');
       li.innerHTML = msg.msg;
-      ul.appendChild(li);
+      messages.appendChild(li);
     });
   }
 
   handleSubmit(e) {
     e.preventDefault();
     const socket = io();
-    const clear = document.getElementById('m');
+    const clear = document.getElementById('clear');
     // send data to server through socket 'server-chat'
     socket.emit('server-chat', clear.value);
     clear.value = '';
@@ -33,6 +33,11 @@ export default class Socket extends Component {
       msg: e.target.value,
     });
   }
+
+  // pickUser: function() {
+  //   const user = document.getElementById("user");
+  //   this.setState({ user: user });
+  // },
 
   render() {
     return(
@@ -47,11 +52,12 @@ export default class Socket extends Component {
         </div>
         <div className='socket-form'>
           <form onSubmit={event => this.handleSubmit(event)}>
-            <input id="m" onChange={event => this.handleInputChange(event)}/>
-            <button>Send</button>
+            <input id="clear" onChange={event => this.handleInputChange(event)}/>
+            <button>Send</button><br/>
           </form>
         </div>
       </div>
     )
   }
 }
+            // <input id="user" type="text" placeholder="username" /> <button onClick={() =self.pickUser()}> select user </button>

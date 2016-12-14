@@ -15,7 +15,8 @@ export default class App extends Component {
       searchTerm: '',
       destinations: [],
       title: {},
-      result: {}
+      result: {},
+      user: undefined
     };
   }
 
@@ -140,13 +141,6 @@ export default class App extends Component {
           />
         </div>
 
-        <div className="image">
-          <Image
-            source={this.state.image}
-            name={this.state.searchTerm}
-          />
-        </div>
-
         <div className="itinerary">
           <Itinerary
             userTitle={this.updateTitle.bind(this)}
@@ -156,10 +150,19 @@ export default class App extends Component {
           />
         </div>
 
+        <div className="image">
+          <Image
+            source={this.state.image}
+            name={this.state.searchTerm}
+          />
+        </div>
+
         </div>
 
         <div className="socket-container">
-          <Socket />
+          <Socket
+          user={this.state.user}
+          />
         </div>
 
         <footer>
