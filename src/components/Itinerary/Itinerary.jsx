@@ -11,6 +11,7 @@ class Itinerary extends Component {
     title={mov.title}
     key={i}
     id={mov.id}
+    updateItineraryTitle={this.props.updateItineraryTitle}
     deleteFromDb={this.props.deleteFromDb}
     />
     )
@@ -18,6 +19,12 @@ class Itinerary extends Component {
 
   componentWillMount(){
     this.props.getAllItineraries();
+  }
+
+    handleInputChange(e) {
+    this.setState({
+      msg: e.target.value,
+    });
   }
 
 render() {

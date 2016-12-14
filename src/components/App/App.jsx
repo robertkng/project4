@@ -47,8 +47,20 @@ export default class App extends Component {
     .catch(err => console.log(err));
   }
 
+  updateItineraryTitle(id) {
+    fetch(`/itinerary/itinerary/${id}`, {
+      method: 'PUT'
+    })
+    .then(() => {
+      const title = this.state.title.filter((mov) => {
+        return mov.id !==id;
+      });
+      this.setState({ title });
+    })
+    .catch(err => console.log(err));
+  }
+
   getAllDestinations() {
-    // console.log('app.jsx');
     fetch(`/api/destinations`)
     .then(r => r.json())
     .then((results) => {
@@ -96,7 +108,7 @@ export default class App extends Component {
       console.log(result);
       // console.log(result.data[0].assets);
       this.setState({
-        image: result.data[0].assets.preview_mp4.url,
+        image: result.data[0].assets.preview_mp4.url
         // image: result.data[0].assets.preview.url,
       });
     });
@@ -161,6 +173,7 @@ export default class App extends Component {
             userInput={this.updateItinerary.bind(this)}
             addToDb={this.addToDb.bind(this)}
             getAllItineraries={this.getAllItineraries.bind(this)}
+            updateItineraryTitle={this.updateItineraryTitle.bind(this)}
             deleteFromDb={this.deleteFromDb.bind(this)}
           />
         </div>

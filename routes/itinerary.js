@@ -11,7 +11,7 @@ router.post('/itinerary', db.addItinerary, (req, res) => {
   res.json(res.itinerary || []);
 })
 
-router.put('/itinerary', db.updateItinerary, (req, res) => {
+router.put('/itinerary/:id', db.updateItineraryTitle, (req, res) => {
   res.json(res.itinerary || []);
 })
 

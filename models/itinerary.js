@@ -1,7 +1,6 @@
 const pgp = require('pg-promise')();
 const db = require('../lib/dbconnect');
 
-
 function getAllItineraries(req, res, next) {
   db.any(`SELECT * FROM itinerary;`)
   .then((results) => {
@@ -19,8 +18,8 @@ function addItinerary(req, res, next) {
  .catch(err => next(err));
 }
 
-function updateItinerary(req, res, next) {
-  db.result(`UPDATE FROM itinerary
+function updateItineraryTitle(req, res, next) {
+  db.result(`UPDATE title FROM itinerary
     WHERE id = $1;`, [req.params.id])
   .then(next())
   .catch(err => next(err));
@@ -36,7 +35,7 @@ function deleteItinerary(req, res, next) {
 module.exports = {
   addItinerary,
   getAllItineraries,
-  updateItinerary,
+  updateItineraryTitle,
   deleteItinerary
 };
 

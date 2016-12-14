@@ -24,6 +24,11 @@ module.exports = {
     reasons: true
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
+      },
+    }),
     new HtmlWebpackPlugin({
       title: 'Quotinerary',
       xhtml: true,
@@ -75,3 +80,27 @@ module.exports = {
    extensions: ['', '.js', '.jsx', '.css'],
   },
 };
+
+if (process.env &&
+  process.env.NODE_ENV &&
+  process.env.NODE_ENV === 'production') {
+  const prodPlugins = [
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: true,
+      },
+      output: {
+        comments: false,
+      },
+    }),
+    new webpack.optimize.CommonsChunkPlugin('/js/common.js'),
+  ];
+
+  config.plugins = config.plugins.concat(prodPlugins);
+
+  config.cache = false;
+  config.debug = false;
+  config.devtool = undefined;
+}
+
+module.exports = config;
