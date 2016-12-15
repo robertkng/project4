@@ -3,6 +3,7 @@ import './ItineraryList.css';
 
 class ItineraryList extends Component {
 
+// run the below two functions on click targeting the specific id in the database
   render() {
     return (
 

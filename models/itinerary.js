@@ -1,6 +1,7 @@
 const pgp = require('pg-promise')();
 const db = require('../lib/dbconnect');
 
+// render all itineraries saved to the database
 function getAllItineraries(req, res, next) {
   db.any(`SELECT * FROM itinerary;`)
   .then((results) => {
@@ -25,6 +26,7 @@ function updateItineraryTitle(req, res, next) {
   .catch(err => next(err));
 }
 
+// function that deletes selected row from the database
 function deleteItinerary(req, res, next) {
   db.result(`DELETE FROM itinerary
     WHERE id = $1;`, [req.params.id])

@@ -12,10 +12,12 @@ router.post('/itinerary', db.addItinerary, (req, res) => {
   res.json(res.itinerary || []);
 })
 
+
 router.put('/itinerary/:id', db.updateItineraryTitle, (req, res) => {
   res.json(res.itinerary || []);
 })
 
+// call deleteItinerary function within the ../models/itinerary file
 router.delete('/itinerary', db.deleteItinerary, (req, res) => {
   res.json(res.itinerary || []);
 })

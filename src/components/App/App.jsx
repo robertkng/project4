@@ -1,5 +1,5 @@
+// require classes from files that props will be passed through
 import React, { Component } from 'react';
-// import Socket from './Socket/Socket.jsx';
 import Search from '../Search/Search.jsx';
 import Image from '../Image/Image.jsx';
 import Destination from '../Destination/Destination.jsx';
@@ -8,6 +8,7 @@ import Socket from '../Socket/Socket.jsx';
 import './App.css';
 
 export default class App extends Component {
+// state prior to any component changes
     constructor() {
     super();
 
@@ -20,6 +21,7 @@ export default class App extends Component {
     };
   }
 
+// render all saved itineraries
   getAllItineraries() {
     console.log(this.state.title)
     fetch(`/itinerary/itinerary`)
@@ -33,12 +35,14 @@ export default class App extends Component {
     .catch(err => console.log(err));
   }
 
+// delete any selected itineraries
   deleteFromDb(id) {
     // console.log('deleteFromDb');
     fetch(`/itinerary/itinerary/${id}`, {
       method: 'DELETE'
     })
     .then(() => {
+// filter and render any titles that do not match the id
       const title = this.state.title.filter((mov) => {
         return mov.id !==id;
       });
@@ -60,6 +64,7 @@ export default class App extends Component {
     .catch(err => console.log(err));
   }
 
+// render all destinations from the database
   getAllDestinations() {
     fetch(`/api/destinations`)
     .then(r => r.json())
@@ -72,6 +77,7 @@ export default class App extends Component {
     .catch(err => console.log(err));
   }
 
+// change the value of the searchTerm to whatever is being typed out
   updateInput(e) {
     this.setState({
       searchTerm: e.target.value
@@ -114,6 +120,7 @@ export default class App extends Component {
     });
   }
 
+// change the value of the title to whatever is being typed out
   updateTitle(e) {
     this.setState({
       title: e.target.value
@@ -121,6 +128,7 @@ export default class App extends Component {
     console.log(this.state.title);
   }
 
+// change the value of the result to whatever is being typed out
   updateItinerary(e) {
     this.setState({
       result: e.target.value
@@ -128,6 +136,7 @@ export default class App extends Component {
     console.log(this.state.result);
   }
 
+// add the title and itinerary onto the database
   addToDb(e) {
     fetch('/itinerary/itinerary', {
       headers: {
@@ -142,6 +151,8 @@ export default class App extends Component {
     .catch(err => console.log(err));
   }
 
+
+// props to be passed through respective components
   render() {
     return (
       <div className="App">

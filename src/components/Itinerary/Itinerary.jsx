@@ -4,7 +4,8 @@ import './Itinerary.css';
 
 class Itinerary extends Component {
 
-
+// map through all the saved itineraries in the database and render its
+// title along with an update and delete button for each
   renderAllItineraries() {
     return this.props.title.map((mov, i) =>
     <ItineraryList
@@ -17,16 +18,13 @@ class Itinerary extends Component {
     )
 }
 
+// run the getAllItineraries function onload
   componentWillMount(){
     this.props.getAllItineraries();
   }
 
-    handleInputChange(e) {
-    this.setState({
-      msg: e.target.value,
-    });
-  }
-
+// provide an input box to enter title and itinerary details and call the function
+// to add to database when button is clicked
 render() {
     return (
     <div className="itinerary">
