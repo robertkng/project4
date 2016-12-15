@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models/itinerary');
 
+// setup routers to call on functions from specific files
 router.get('/itinerary', db.getAllItineraries, (req, res) => {
   res.json(res.itinerary || []);
 })
