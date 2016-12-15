@@ -7,6 +7,7 @@ export default class Socket extends Component {
     this.socketFunction();
   }
 
+// function to send message through socket.io server
   socketFunction() {
     // receive data from server through socket 'chatroom'
     const socket = io();
@@ -19,6 +20,7 @@ export default class Socket extends Component {
     });
   }
 
+// function that sends the messages, then clears the input box afterwards
   handleSubmit(e) {
     e.preventDefault();
     const socket = io();
@@ -28,6 +30,7 @@ export default class Socket extends Component {
     clear.value = '';
   }
 
+// function to change the input values as message is typed out
   handleInputChange(e) {
     this.setState({
       msg: e.target.value,
@@ -39,6 +42,7 @@ export default class Socket extends Component {
   //   this.setState({ user: user });
   // },
 
+// render message box on the bottom right
   render() {
     return(
       <div className='message-popup'>
