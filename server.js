@@ -45,7 +45,7 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 
 // all routes will pass through /api
-app.use('/api', require('./routes/destination'));
+app.use('/', require('./routes/destination'));
 app.use('/itinerary', require('./routes/itinerary'));
 
 // To log whether a server is running

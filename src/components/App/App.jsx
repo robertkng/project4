@@ -66,7 +66,7 @@ export default class App extends Component {
 
 // render all destinations from the database
   getAllDestinations() {
-    fetch(`/api/destinations`)
+    fetch(`/destinations`)
     .then(r => r.json())
     .then((results) => {
       this.setState({
