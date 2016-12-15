@@ -1,4 +1,6 @@
 An embedded screenshot of the app
+![quotinerary](https://git.generalassemb.ly/storage/user/58/files/8fc376c8-c2a9-11e6-8007-ebb96ffda6b0)
+
 
 Explanations of the technologies used
 React.js to create single page application
